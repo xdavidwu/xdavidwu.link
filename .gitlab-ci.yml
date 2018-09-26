@@ -10,7 +10,7 @@ variables:
   LANGUAGE: "en_US.UTF-8"
 
 before_script:
-- bundle install
+- bundle install -j 24
 
 test:
   stage: test
