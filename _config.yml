@@ -96,7 +96,7 @@ author:
   name             : "xdavidwu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Always debugging."
-  location         : ""
+  location         :
   email            :
   links:
     - label: "Email"
