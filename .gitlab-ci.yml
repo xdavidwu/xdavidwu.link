@@ -25,7 +25,7 @@ test:
 pages:
   stage: deploy
   script:
-  - bundle exec rougify style base16.solarized.dark > assets/css/hilighting.css
+  - bundle exec rougify style base16.solarized.dark >> assets/css/main.scss
   - bundle exec jekyll build -d public
   artifacts:
     paths:
