@@ -15,12 +15,13 @@
 #highlight::-webkit-scrollbar
 {
 	width: 6px;
+	height: 6px;
 	background-color: rgba(0,0,0,0);
 }
 
 #highlight::-webkit-scrollbar-thumb
 {
-	background-color: #8cd2d5;
+	background-color: #699ea0;
 }
 
 ::-webkit-scrollbar-track
@@ -31,10 +32,11 @@
 ::-webkit-scrollbar
 {
 	width: 6px;
+	height: 6px;
 	background-color: rgba(0,0,0,0);
 }
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #8cd2d5;
+	background-color: #699ea0;
 }
