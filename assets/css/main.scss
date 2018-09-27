@@ -6,3 +6,35 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+#highlight::-webkit-scrollbar-track
+{
+	background-color: rgba(0,0,0,0);
+}
+
+#highlight::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba(0,0,0,0);
+}
+
+#highlight::-webkit-scrollbar-thumb
+{
+	background-color: #8cd2d5;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #8cd2d5;
+}
