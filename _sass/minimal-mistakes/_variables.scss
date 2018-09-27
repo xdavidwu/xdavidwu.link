@@ -6,6 +6,8 @@
    Typography
    ========================================================================== */
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 $doc-font-size: 16 !default;
 
 /* paragraph indention */
@@ -15,7 +17,7 @@ $indent-var: 1.3em !default;
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+  "Helvetica Neue", "Lucida Grande", Arial, 'Noto Sans TC', sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
