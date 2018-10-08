@@ -9,6 +9,6 @@ tags:
   - boot
 ---
 
-_mirror from https://github.com/xdavidwu/arch-linux-boot-optimize_
+_mirror from [xdavidwu/arch-linux-boot-optimize](https://github.com/xdavidwu/arch-linux-boot-optimize)_
 
 {% include_relative arch-linux-boot-optimize/README.md %}
