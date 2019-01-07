@@ -31,3 +31,20 @@ sudo cp bazel-genfiles/tensorflow/include/. /usr/local/include/ -r
 sudo ln /usr/local/include/external/com_google_absl/absl /usr/local/include/absl -s
 sudo ln /usr/local/include/external/protobuf_archive/src/google /usr/local/include/google -s
 ```
+
+libraries 的部份:
+
+```
+sudo cp bazel-bin/tensorflow/libtensorflow_cc.so /usr/local/lib/
+sudo cp bazel-bin/tensorflow/libtensorflow_framework.so /usr/local/lib/
+```
+
+編譯:
+
+```
+g++ foo.cpp -ltensorflow_framework -ltensorflow_cc
+```
+
+absl 的 header 貌似在 C++17 下會把 absl::string_view 用 std::basic_string_view 實做
+
+可能會造成 link 時有用字串當參數的函式找不到 例如 Conv2D 的 constructor
