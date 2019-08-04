@@ -1,3 +1,6 @@
 [submodule "_posts/arch-linux-boot-optimize"]
 	path = _posts/arch-linux-boot-optimize
 	url = https://github.com/xdavidwu/arch-linux-boot-optimize
+[submodule "_posts/arch-linux-install"]
+	path = _posts/arch-linux-install
+	url = https://github.com/xdavidwu/arch-linux-install
