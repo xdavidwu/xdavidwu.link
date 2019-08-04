@@ -1,5 +1,5 @@
 ---
-title: "Arch Linux 安裝指南"
+title: "Arch Linux 安裝攻略"
 categories:
   - Archlinux
 tags:
