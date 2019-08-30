@@ -16,7 +16,7 @@ pages:
   artifacts:
     paths:
     - public
-  caches:
+  cache:
     paths:
     - .bundler
   only:
