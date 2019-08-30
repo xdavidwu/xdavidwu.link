@@ -5,11 +5,10 @@ categories:
 tags:
   - docker
   - lxc
-  - k8s
   - ubuntu
 ---
 
-在 ubuntu 上的 lxc 裡再跑一層 docker (或k8s又或還是一層lxc之類的)
+在 ubuntu 上的 lxc 裡再跑一層 docker (或還是一層lxc之類的)
 
 主要會碰到的難關有兩個 _apparmor 和 cgroup_
 
