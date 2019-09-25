@@ -68,4 +68,6 @@ yum-cron 沒了, 改用 dnf-automatic, config 大致上長一樣只是多了些�
 
 dhclient 改成 dhcp-client, 指令還是叫 dhclient, 我忘了先前 lxc 是怎麼讓他自動 start 的就寫了個 systemd service
 
+python 我兩次都沒有直接到位, 要 `alternatives --config python` 一下
+
 這樣搞下來目前看跑起來是沒什麼問題
