@@ -117,6 +117,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "Pleroma"
+      icon: "fab fa-fw fa-pleroma"
+      url: "https://pleroma.eglo.ga/xdavidwu"
 
 # Site Footer
 footer:
