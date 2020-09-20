@@ -5,6 +5,11 @@
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+
+@media (prefers-color-scheme: light) {
+	@import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
+}
+
 @import "minimal-mistakes"; // main partials
 
 ::-webkit-scrollbar-track
