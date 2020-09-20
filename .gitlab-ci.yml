@@ -1,4 +1,4 @@
-image: ruby:latest
+image: ruby:alpine
 
 variables:
   JEKYLL_ENV: production
@@ -8,10 +8,10 @@ variables:
 pages:
   stage: deploy
   before_script:
+  - apk add git make gcc musl-dev g++
   - mkdir -p .bundler
-  - bundle install -j 24 --path .bundler
+  - bundle install -j $(nproc) --path .bundler
   script:
-  - bundle exec rougify style base16.dark >> assets/css/main.scss
   - bundle exec jekyll build -d public
   artifacts:
     paths:
