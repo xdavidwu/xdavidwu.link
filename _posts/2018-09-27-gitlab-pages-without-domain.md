@@ -20,7 +20,7 @@ reverse proxy 內部將 uri 的 /pages/<user> 刪除
 
 實作 nginx config:
 
-```
+```nginx
 location ~ /pages/(?<user>[^/]+)/ {
     rewrite ^/pages/([^/]+)/(.*)    /$2 break;
     proxy_pass  http://<gitlab ip>;
