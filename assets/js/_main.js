@@ -2,7 +2,6 @@ window.$ = window.jQuery = require('jquery');
 require('magnific-popup');
 require('./plugins/jquery.fitvids');
 require('./plugins/jquery.greedy-navigation');
-const SmoothScroll = require('smooth-scroll');
 const Gumshoe = require('gumshoejs');
 /* ==========================================================================
    jQuery plugin settings and other scripts
@@ -57,14 +56,6 @@ $(document).ready(function() {
     setTimeout(function() {
       $(".search-content input").focus();
     }, 400);
-  });
-
-  // Smooth scrolling
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 20,
-    speed: 400,
-    speedAsDuration: true,
-    durationMax: 500
   });
 
   // Gumshoe scroll spy init
