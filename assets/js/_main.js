@@ -1,15 +1,15 @@
 window.$ = window.jQuery = require('jquery');
-require('magnific-popup');
-require('./plugins/jquery.fitvids');
+//require('magnific-popup');
+//require('./plugins/jquery.fitvids');
 require('./plugins/jquery.greedy-navigation');
-const Gumshoe = require('gumshoejs');
+//const Gumshoe = require('gumshoejs');
 /* ==========================================================================
    jQuery plugin settings and other scripts
    ========================================================================== */
 
 $(document).ready(function() {
   // FitVids init
-  $("#main").fitVids();
+  //$("#main").fitVids();
 
   // Sticky sidebar
   var stickySideBar = function() {
@@ -59,7 +59,7 @@ $(document).ready(function() {
   });
 
   // Gumshoe scroll spy init
-  if($("nav.toc").length > 0) {
+  /*if($("nav.toc").length > 0) {
     var spy = new Gumshoe("nav.toc a", {
       // Active classes
       navClass: "active", // applied to the nav list item
@@ -76,10 +76,10 @@ $(document).ready(function() {
       // Event support
       events: true // if true, emit custom events
     });
-  }
+  }*/
 
   // add lightbox class to all image links
-  $(
+  /*$(
     "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']"
   ).addClass("image-popup");
 
@@ -116,7 +116,7 @@ $(document).ready(function() {
     },
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-  });
+  })*/;
 
   // Add anchors for headings
   $('.page__content').find('h1, h2, h3, h4, h5, h6').each(function() {
