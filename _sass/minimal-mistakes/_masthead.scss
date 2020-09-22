@@ -5,9 +5,7 @@
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
 
@@ -17,9 +15,7 @@
     margin-right: auto;
     padding: 0.625em 1em;
     max-width: 100%;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     font-family: $sans-serif-narrow;
 
@@ -42,7 +38,6 @@
 }
 
 .site-title {
-  display: -webkit-box;
   display: flex;
   align-self: center;
   font-weight: bold;

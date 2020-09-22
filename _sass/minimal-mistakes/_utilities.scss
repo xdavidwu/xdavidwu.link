@@ -336,7 +336,6 @@ body:hover .visually-hidden button {
   height: $navicon-height;
   background: $primary-color;
   margin: auto;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 
   &:before,
@@ -347,7 +346,6 @@ body:hover .visually-hidden button {
     width: $navicon-width;
     height: $navicon-height;
     background: $primary-color;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 
@@ -367,7 +365,6 @@ body:hover .visually-hidden button {
   /* overlay the lines by setting both their top values to 0*/
   &:before,
   &:after {
-    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     top: 0;
     width: $navicon-width;
@@ -375,11 +372,9 @@ body:hover .visually-hidden button {
 
   /* rotate the lines to form the x shape*/
   &:before {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
     transform: rotate3d(0, 0, 1, 45deg);
   }
   &:after {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
     transform: rotate3d(0, 0, 1, -45deg);
   }
 }
@@ -395,7 +390,6 @@ body:hover .visually-hidden button {
       height: 100%;
       opacity: 0;
       background-color: $background-color;
-      -webkit-transition: $global-transition;
       transition: $global-transition;
       pointer-events: none;
     }
@@ -404,7 +398,6 @@ body:hover .visually-hidden button {
   &.close {
     &:before {
       opacity: 0.9;
-      -webkit-transition: $global-transition;
       transition: $global-transition;
       pointer-events: auto;
     }
@@ -432,7 +425,6 @@ body:hover .visually-hidden button {
 .sticky {
   @include breakpoint($large) {
     @include clearfix();
-    position: -webkit-sticky;
     position: sticky;
     top: 2em;
 
@@ -580,13 +572,5 @@ a.reversefootnote {
     left: 0;
     width: 100%;
     height: 100%;
-  }
-}
-
-// full screen video fixes
-:-webkit-full-screen-ancestor {
-  .masthead,
-  .page__footer {
-    position: static;
   }
 }

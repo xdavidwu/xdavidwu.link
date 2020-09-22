@@ -13,9 +13,7 @@
   padding-left: 1em;
   padding-right: 1em;
   font-family: $sans-serif;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 
   @include breakpoint($x-large) {
@@ -171,9 +169,7 @@
 
 .greedy-nav {
   position: relative;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   min-height: $nav-height;
   background: $background-color;
@@ -208,16 +204,12 @@
   }
 
   .visible-links {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: end;
     justify-content: flex-end;
-    -webkit-box-flex: 1;
     flex: 1;
     overflow: hidden;
 
     li {
-      -webkit-box-flex: 0;
       flex: none;
     }
 
@@ -232,14 +224,11 @@
         height: 4px;
         background: $primary-color;
         width: 100%;
-        -webkit-transition: $global-transition;
         transition: $global-transition;
-        -webkit-transform: scaleX(0) translate3d(0, 0, 0);
         transform: scaleX(0) translate3d(0, 0, 0); // hide
       }
 
       &:hover:before {
-        -webkit-transform: scaleX(1);
         transform: scaleX(1); // reveal
       }
     }
@@ -254,8 +243,6 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     background: $background-color;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16),
-      0 2px 10px 0 rgba(#000, 0.12);
     box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
 
     &.hidden {
@@ -342,7 +329,6 @@
       border: 1px solid $light-gray;
       border-radius: $border-radius;
       z-index: 20;
-      -webkit-transition: 0.2s ease-out;
       transition: 0.2s ease-out;
       cursor: pointer;
 
@@ -356,12 +342,10 @@
         height: 0.125em;
         line-height: 1;
         background-color: $gray;
-        -webkit-transition: 0.2s ease-out;
         transition: 0.2s ease-out;
       }
 
       &:after {
-        -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
       }
 
@@ -390,12 +374,10 @@
 
     /* on hover show expand*/
     label:hover:after {
-      -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
     }
 
     input:checked + label:hover:after {
-      -webkit-transform: rotate(0);
       transform: rotate(0);
     }
 
@@ -440,22 +422,18 @@
     opacity: 0%;
     overflow: hidden;
     z-index: 10;
-    -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
-    -webkit-transform: translate(0, 10%);
     transform: translate(0, 10%);
   }
 }
 
 @include breakpoint(max-width $large - 1px) {
   .nav__list input:checked ~ .nav__items {
-    -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
     overflow: visible;
     opacity: 1;
     margin-top: 1em;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
@@ -489,7 +467,6 @@
   background-color: $background-color;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 
   .nav__title {

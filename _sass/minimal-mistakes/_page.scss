@@ -8,10 +8,8 @@
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
-  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
@@ -20,11 +18,8 @@
 }
 
 body {
-  display: -webkit-box;
   display: flex;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
           flex-direction: column;
 }
 
@@ -92,7 +87,6 @@ body {
 			left: 0.5em;
 			opacity: 0;
 			font-size: 0.8em;
-			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			transition: opacity 0.2s ease-in-out 0.1s;
 		}
@@ -158,9 +152,7 @@ body {
   position: relative;
   margin-bottom: 2em;
   @include clearfix;
-  -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s;
 
   &--overlay {
@@ -171,9 +163,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-animation: $intro-transition;
     animation: $intro-transition;
-    -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
 
     a {
@@ -375,10 +365,8 @@ body {
   }
 
   a {
-    display: -webkit-box;
     display: flex;
     padding: 0.25em 0;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     color: inherit;
     text-decoration: none;
@@ -418,7 +406,6 @@ body {
 }
 
 .page__comments-form {
-  -webkit-transition: $global-transition;
   transition: $global-transition;
 
   &.disabled {
