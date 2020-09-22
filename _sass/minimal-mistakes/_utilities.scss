@@ -368,7 +368,6 @@ body:hover .visually-hidden button {
   &:before,
   &:after {
     -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     top: 0;
     width: $navicon-width;
