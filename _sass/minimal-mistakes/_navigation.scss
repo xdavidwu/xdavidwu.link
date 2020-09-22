@@ -127,9 +127,13 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
     border-radius: $border-radius;
+    color: $text-color;
+    background-color: $primary-color;
+
+    &:visited {
+      color: $text-color;
+    }
 
     &:hover {
       @include yiq-contrasted($muted-text-color);
@@ -150,6 +154,7 @@
       color: rgba($muted-text-color, 0.5);
       pointer-events: none;
       cursor: not-allowed;
+      background-color: $primary-color-disabled;
     }
   }
 }

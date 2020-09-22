@@ -5,7 +5,8 @@
 /* Colors */
 $background-color: #181818 !default;
 $text-color: #fff6fb !default;
-$primary-color: #00adb5 !default;
+$primary-color: #00acc1 !default;
+$primary-color-disabled: #00838f !default;
 $border-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color: #202124 !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
@@ -21,17 +22,6 @@ $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
-}
-
-/* next/previous buttons */
-.pagination--pager {
-  color: $text-color;
-  background-color: $primary-color;
-  border-color: transparent;
-
-  &:visited {
-    color: $text-color;
-  }
 }
 
 .ais-search-box .ais-search-box--input {
