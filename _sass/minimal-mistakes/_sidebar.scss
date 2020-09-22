@@ -18,8 +18,7 @@
   @include breakpoint($large) {
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
-    // opacity: 0.75;
-    transition: opacity 0.2s ease-in-out;
+    scrollbar-width: thin;
 
     &:hover {
       opacity: 1;
