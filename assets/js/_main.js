@@ -1,7 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 //require('magnific-popup');
 //require('./plugins/jquery.fitvids');
-require('./plugins/jquery.greedy-navigation');
+require('./_greedy-navigation');
 //const Gumshoe = require('gumshoejs');
 /* ==========================================================================
    jQuery plugin settings and other scripts
