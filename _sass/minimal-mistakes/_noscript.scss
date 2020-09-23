@@ -8,3 +8,11 @@
     }
   }
 }
+
+#follow-button:checked + label + ul.author__urls {
+  display: block;
+}
+
+#follow-button {
+  display: none;
+}
