@@ -12,23 +12,6 @@
 
 @import "minimal-mistakes"; // main partials
 
-::-webkit-scrollbar-track
-{
-	background-color: rgba(0,0,0,0);
-}
-
-::-webkit-scrollbar
-{
-	width: 6px;
-	height: 6px;
-	background-color: rgba(0,0,0,0);
-}
-
-::-webkit-scrollbar-thumb
-{
-	background-color: #699ea0;
-}
-
 .masthead {
 	position: sticky;
 	background: $background-color;
