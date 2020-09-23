@@ -22,10 +22,11 @@ var idx = lunr(function () {
   }
 });
 
-$(document).ready(function() {
-  $('input#search').on('keyup', function () {
-    var resultdiv = $('#results');
-    var query = $(this).val().toLowerCase();
+document.addEventListener('DOMContentLoaded', () => {
+  const search = document.querySelector('input#search');
+  search.addEventListener('keyup', () => {
+    var resultdiv = document.querySelector('#results');
+    var query = search.value.toLowerCase();
     var result =
       idx.query(function (q) {
         query.split(lunr.tokenizer.separator).forEach(function (term) {
@@ -38,34 +39,35 @@ $(document).ready(function() {
           }
         })
       });
-    resultdiv.empty();
-    resultdiv.prepend('<p class="results__found">'+result.length+' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
+    resultdiv.innerHTML = "";
+    let p = document.createElement("p");
+    p.classList.add("results__found");
+    p.innerHTML = result.length + '{{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}';
+    resultdiv.append(p);
     for (var item in result) {
       var ref = result[item].ref;
+      let searchitem = document.createElement("div");
+      searchitem.classList.add("list__item");
       if(store[ref].teaser){
-        var searchitem =
-          '<div class="list__item">'+
-            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
-              '<h2 class="archive__item-title" itemprop="headline">'+
-                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
-              '</h2>'+
-              '<div class="archive__item-teaser">'+
-                '<img src="'+store[ref].teaser+'" alt="">'+
-              '</div>'+
-              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
-            '</article>'+
-          '</div>';
+        searchitem.innerHTML =
+          '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+            '<h2 class="archive__item-title" itemprop="headline">'+
+              '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+            '</h2>'+
+            '<div class="archive__item-teaser">'+
+              '<img src="'+store[ref].teaser+'" alt="">'
+	    '</div>'+
+            '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+          '</article>';
       }
       else{
-    	  var searchitem =
-          '<div class="list__item">'+
-            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
-              '<h2 class="archive__item-title" itemprop="headline">'+
-                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
-              '</h2>'+
-              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
-            '</article>'+
-          '</div>';
+    	searchitem.innerHTML =
+          '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+            '<h2 class="archive__item-title" itemprop="headline">'+
+              '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+            '</h2>'+
+            '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+          '</article>';
       }
       resultdiv.append(searchitem);
     }

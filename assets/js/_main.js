@@ -1,4 +1,4 @@
-window.$ = window.jQuery = require('jquery');
+//window.$ = window.jQuery = require('jquery');
 //require('magnific-popup');
 //require('./plugins/jquery.fitvids');
 require('./_greedy-navigation');
@@ -7,27 +7,27 @@ require('./_greedy-navigation');
    jQuery plugin settings and other scripts
    ========================================================================== */
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', () => {
   // FitVids init
   //$("#main").fitVids();
 
   // Close search screen with Esc key
-  $(document).keyup(function(e) {
+  document.addEventListener('keyup', (e) => {
     if (e.keyCode === 27) {
-      if ($(".initial-content").hasClass("is--hidden")) {
-        $(".search-content").toggleClass("is--visible");
-        $(".initial-content").toggleClass("is--hidden");
+      if (document.getElementsByClassName("initial-content")[0].classList.contains("is--hidden")) {
+        document.getElementsByClassName("search-content")[0].classList.toggle("is--visible");
+        document.getElementsByClassName("initial-content")[0].classList.toggle("is--hidden");
       }
     }
   });
 
   // Search toggle
-  $(".search__toggle").on("click", function() {
-    $(".search-content").toggleClass("is--visible");
-    $(".initial-content").toggleClass("is--hidden");
+  document.getElementsByClassName("search__toggle")[0].addEventListener("click", () => {
+    document.getElementsByClassName("search-content")[0].classList.toggle("is--visible");
+    document.getElementsByClassName("initial-content")[0].classList.toggle("is--hidden");
     // set focus on input
     setTimeout(function() {
-      $(".search-content input").focus();
+      document.querySelector(".search-content input").focus();
     }, 400);
   });
 
