@@ -3,15 +3,10 @@
 {% include seo.html %}
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  document.documentElement.className = '';
 </script>
-
-<!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/v5-compat.min.css" integrity="sha384-1zW94WHdRLtWmM3xxKcAULg/IDeSsb7kofYSkI2jlXTRLO9UXrZcxB1Xi7jQ18Fg" crossorigin="anonymous">
