@@ -17,7 +17,6 @@
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
       max-width: $max-width;
@@ -41,7 +40,6 @@
   display: flex;
   align-self: center;
   font-weight: bold;
-  // z-index: 20;
 }
 
 .site-subtitle {
@@ -79,6 +77,6 @@
 
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: bold;
   }
 }
