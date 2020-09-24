@@ -15,4 +15,7 @@
 
 #follow-button {
   display: none;
+  &:checked + label {
+    background-color: $primary-color-disabled;
+  }
 }

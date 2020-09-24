@@ -51,11 +51,7 @@
         border: 1px solid #fff;
       }
 
-      &:visited {
-        @include yiq-contrasted($color);
-      }
-
-      &:hover {
+      &:not(label):hover {
         @include yiq-contrasted(mix(#000, $color, 20%));
       }
     }
