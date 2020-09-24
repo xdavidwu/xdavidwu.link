@@ -139,6 +139,14 @@ a {
     color: $link-color-hover;
     outline: 0;
   }
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+  
+  &:hover, &:active {
+    text-decoration: underline;
+  }
 }
 
 /* buttons */

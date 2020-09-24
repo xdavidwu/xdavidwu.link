@@ -46,14 +46,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  a:link, a:visited {
-    text-decoration: none;
-  }
-  
-  a:hover, a:active {
-    text-decoration: underline;
-  }
-
   a[rel="permalink"]::before {
     content: '';
     position: absolute;
