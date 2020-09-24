@@ -30,7 +30,7 @@
 
   <div class="author__urls-wrapper">
     <input type="checkbox" id="follow-button" autocomplete="off">
-    <label for="follow-button" class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</label>
+    <label for="follow-button" class="btn btn--primary">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</label>
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
