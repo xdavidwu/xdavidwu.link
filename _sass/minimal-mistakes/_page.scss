@@ -4,12 +4,8 @@
 
 #main {
   @include clearfix;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0 1em;
   animation: $intro-transition;
-  max-width: 100%;
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
@@ -20,7 +16,7 @@
 body {
   display: flex;
   min-height: 100vh;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .initial-content,
@@ -42,9 +38,6 @@ body {
 
   .page__inner-wrap {
     float: left;
-    margin-top: 1em;
-    margin-left: 0;
-    margin-right: 0;
     width: 100%;
     clear: both;
 
@@ -53,8 +46,6 @@ body {
     .page__share {
       position: relative;
       float: left;
-      margin-left: 0;
-      margin-right: 0;
       width: 100%;
       clear: both;
     }
@@ -62,9 +53,6 @@ body {
 }
 
 .page__title {
-  margin-top: 0;
-  line-height: 1;
-
   & + .page__meta {
     margin-top: -0.5em;
   }
@@ -80,19 +68,19 @@ body {
     border-bottom: 1px solid $border-color;
   }
 
-	h1, h2, h3, h4, h5, h6 {
-		.header-link {
-			position: relative;
-			left: 0.5em;
-			opacity: 0;
-			font-size: 0.8em;
-			transition: opacity 0.2s ease-in-out 0.1s;
-		}
+  h1, h2, h3, h4, h5, h6 {
+    .header-link {
+      position: relative;
+      left: 0.5em;
+      opacity: 0;
+      font-size: 0.8em;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
 
-		&:hover .header-link {
-			opacity: 1;
-		}
-	}
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
 
   p,
   li,
@@ -250,9 +238,7 @@ body {
 }
 
 .page__share-title {
-  margin-bottom: 10px;
   font-size: $type-size-6;
-  text-transform: uppercase;
 }
 
 /*
@@ -301,9 +287,9 @@ body {
 
 .page__taxonomy-item {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 8px;
   margin-bottom: 8px;
-  padding: 5px 10px;
+  padding: 4px 8px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
   border-radius: $border-radius;
@@ -384,19 +370,14 @@ body {
 
 .page__comments {
   float: left;
-  margin-left: 0;
-  margin-right: 0;
   width: 100%;
   clear: both;
 }
 
 .page__comments-title {
-  margin-top: 2rem;
-  margin-bottom: 10px;
   padding-top: 2rem;
   font-size: $type-size-6;
   border-top: 1px solid $border-color;
-  text-transform: uppercase;
 }
 
 .page__comments-form {
@@ -485,6 +466,7 @@ body {
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
+  width: 100%;
 
   @include breakpoint($large) {
     float: right;
@@ -502,9 +484,7 @@ body {
 }
 
 .page__related-title {
-  margin-bottom: 10px;
   font-size: $type-size-6;
-  text-transform: uppercase;
 }
 
 /*
