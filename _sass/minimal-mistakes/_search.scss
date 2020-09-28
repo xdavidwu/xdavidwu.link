@@ -32,15 +32,9 @@
 .search-content {
   display: none;
   visibility: hidden;
-  padding-top: 1em;
-  padding-bottom: 1em;
 
   &__inner-wrap {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
     animation: $intro-transition;
     animation-delay: 0.15s;
 
@@ -77,15 +71,9 @@
   &.is--visible {
     display: block;
     visibility: visible;
-
-    &::after {
-      content: "";
-      display: block;
-    }
   }
 
   .results__found {
-    margin-top: 0.5em;
     font-size: $type-size-6;
   }
 
