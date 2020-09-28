@@ -8,7 +8,7 @@ tags:
   - en
 ---
 
-When learning about Gemini today, I clicked on a `gemini://` link, set my Firefox open-with preference to a command line client and opened, but nothing happened.
+When learning about Gemini today, I clicked on a `gemini://` link, set my Firefox open-with preference to a command line client and clicked "Open link", but nothing happened.
 
 Searching for a way to launch a `.desktop` by command line, hoping for better debugging experience, I got `gtk-launch <.desktop name>`. With that name I assumed there was a GTK or GLib or G-something way to launch `.desktop` and Firefox was likely also using it. Using that command, again, no new terminal was launched but at least there was a line by shell spawned by gtk-launch complaining xterm not found.
 
