@@ -133,7 +133,7 @@
     }
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      background-color: $primary-color-raised;
       text-decoration: none;
     }
 
