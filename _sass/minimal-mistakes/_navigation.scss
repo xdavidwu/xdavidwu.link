@@ -134,6 +134,7 @@
 
     &:hover {
       @include yiq-contrasted($muted-text-color);
+      text-decoration: none;
     }
 
     &:first-child {
