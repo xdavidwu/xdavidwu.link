@@ -53,6 +53,8 @@ body {
 }
 
 .page__title {
+  margin: 0;
+
   & + .page__meta {
     margin-top: -0.5em;
   }
