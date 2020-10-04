@@ -1,25 +1,53 @@
-image: ruby:alpine
-
 variables:
-  JEKYLL_ENV: production
-  LC_ALL: "C.UTF-8"
   GIT_SUBMODULE_STRATEGY: recursive
+
+gemini:
+  stage: build
+  image: alpine:latest
+  before_script:
+    - apk add py3-pip
+    - pip3 install md2gemini
+  script:
+    - mkdir gemini
+    - cd _posts
+    - >
+      for i in *.md;do
+        OIFS=$IFS
+        IFS=$'\n'
+        mv $i $i.orig
+        for line in $(cat $i.orig);do
+          F=$(echo "$line" | sed 's/^{% include_relative \(.*\) %}$/\1/')
+          if [ -f "$F" ];then
+            cat $F >> $i
+          else
+            printf "%s\n" "$line" >> $i
+          fi
+        done
+        IFS=$OIFS
+      done
+    - md2gemini -w -d ../gemini -f -i tab -l paragraph *.md
+  artifacts:
+    paths:
+      - gemini
 
 pages:
   stage: deploy
+  image: ruby:alpine
+  variables:
+    JEKYLL_ENV: production
+    LC_ALL: "C.UTF-8"
   before_script:
-  - apk add git make gcc musl-dev g++
-  - mkdir -p .bundler
-  - bundle install -j $(nproc) --path .bundler
+    - apk add git make gcc musl-dev g++
+    - mkdir -p .bundler
+    - bundle install -j $(nproc) --path .bundler
   script:
-  - bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> assets/css/main.scss
-  - bundle exec jekyll build -d public
+    - bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> assets/css/main.scss
+    - bundle exec jekyll build -d public
   artifacts:
     paths:
-    - public
+      - public
   cache:
     paths:
-    - .bundler
+      - .bundler
   only:
-  - master
-
+    - master
