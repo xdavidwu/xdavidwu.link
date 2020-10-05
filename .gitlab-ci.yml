@@ -8,7 +8,6 @@ gemini:
     - apk add py3-pip
     - pip3 install md2gemini
   script:
-    - mkdir gemini
     - cd _posts
     - >
       for i in *.md;do
@@ -24,6 +23,7 @@ gemini:
           fi
         done
         IFS=$OIFS
+        echo "=> $(echo $i | sed s/\.md$/.gmi/) $(grep '^title:' $i | cut -f 2 -d \")" >> ../gemini/index.gmi
       done
     - md2gemini -w -d ../gemini -f -i tab -l paragraph *.md
   artifacts:

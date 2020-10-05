@@ -1,0 +1,7 @@
+# xdavidwu's blog
+
+This is gemini:// version of xdavidwu's "Hacking Life" blog[1], post contents are identical.
+
+=> https://xdavidwu.eglo.ga/ 1: https://xdavidwu.eglo.ga
+
+## Posts
