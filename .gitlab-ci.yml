@@ -26,7 +26,7 @@ gemini:
         IFS=$OIFS
         echo "=> $(echo $i | sed s/\.md$/.gmi/) $(echo $i | cut -f 1-3 -d '-'): $(grep '^title:' $i | cut -f 2 -d \")" >> ../gemini/index.gmi
       done
-    - md2gemini -w -d ../gemini -f -i tab -l paragraph *.md
+    - md2gemini -w -d ../gemini -a -f -i tab -l paragraph *.md
   artifacts:
     paths:
       - gemini
