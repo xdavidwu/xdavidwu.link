@@ -11,7 +11,7 @@ gemini:
   script:
     - cd _posts
     - >
-      for i in *.md;do
+      for i in $(ls -r *.md);do
         OIFS=$IFS
         IFS=$'\n'
         mv $i $i.orig
