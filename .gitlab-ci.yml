@@ -7,6 +7,7 @@ gemini:
   before_script:
     - apk add py3-pip
     - pip3 install md2gemini
+    - find /lib /usr/lib ~/ -name 'renderers.py' -exec sed -i -E 's/text\.rstrip\(\)\.endswith\("\[" \+ str\(self\.footnote_num\) \+ "\]"\)/False/' {} \;
   script:
     - cd _posts
     - >
