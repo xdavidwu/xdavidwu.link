@@ -38,7 +38,7 @@ pages:
     JEKYLL_ENV: production
     LC_ALL: "C.UTF-8"
   before_script:
-    - apk add git make gcc musl-dev g++
+    - bundle check --path .bundler || apk add git make gcc musl-dev g++
     - mkdir -p .bundler
     - bundle install -j $(nproc) --path .bundler
   script:
