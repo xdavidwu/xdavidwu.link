@@ -4,6 +4,9 @@
 
 @charset "utf-8";
 
+// jekyll variables
+$comments-provider: {{ site.comments.provider }};
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 
 @media (prefers-color-scheme: light) {
