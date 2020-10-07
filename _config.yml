@@ -243,13 +243,9 @@ tag_archive:
 #     tag: /tags/:name/
 
 
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
+jekyll_tidy:
+  exclude:
+    - assets/js/lunr/lunr-en.js
 
 # Defaults
 defaults:
