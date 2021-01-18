@@ -8,7 +8,6 @@ $text-color: #222831;
 $muted-text-color: #393e46;
 $primary-color: #0092ca;
 $border-color: mix(#fff, #393e46, 75%);
-$footer-background-color: $primary-color;
 $link-color: #393e46;
 $masthead-link-color: $text-color;
 $masthead-link-color-hover: $text-color;
@@ -17,6 +16,7 @@ $code-background-color: #fafafa;
 $gray: #7a8288;
 $light-gray: mix(#fff, $gray, 50%);
 $code-background-color-dark: $light-gray;
+$footer-background-color: $light-gray;
 
 .highlight, .highlight.w {
   background-color: $code-background-color;
