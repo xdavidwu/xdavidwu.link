@@ -3,11 +3,13 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
   border-bottom: 1px solid $border-color;
   animation: $intro-transition;
   animation-delay: 0.15s;
   z-index: 20;
+	position: sticky;
+	background: $background-color;
+	top: 0;
 
   &__inner-wrap {
     @include clearfix;

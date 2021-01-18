@@ -422,6 +422,7 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .sticky {
+	top: 3.375em;
   @include breakpoint($large) {
     @include clearfix();
     position: sticky;
