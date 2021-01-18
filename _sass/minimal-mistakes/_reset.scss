@@ -32,7 +32,7 @@ body { margin: 0; }
 
 ::selection {
   color: $background-color;
-  background: #eeeeee;
+  background: $masthead-link-color-hover;
 }
 
 /* Display HTML5 elements in IE6-9 and FF3 */
