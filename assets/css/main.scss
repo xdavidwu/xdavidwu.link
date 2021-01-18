@@ -9,10 +9,6 @@ $comments-provider: {{ site.comments.provider }};
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 
-@media (prefers-color-scheme: light) {
-	@import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
-}
-
 @import "minimal-mistakes"; // main partials
 
 .masthead {
@@ -24,3 +20,10 @@ $comments-provider: {{ site.comments.provider }};
 .sticky {
 	top: 3.375em;
 }
+
+@media (prefers-color-scheme: light) {
+	@import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
+  @import "minimal-mistakes"; // main partials
+}
+
+
