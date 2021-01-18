@@ -13,6 +13,10 @@ $link-color: #393e46;
 $masthead-link-color: $text-color;
 $masthead-link-color-hover: $text-color;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%);
+$code-background-color: #fafafa;
+$gray: #7a8288;
+$light-gray: mix(#fff, $gray, 50%);
+$code-background-color-dark: $light-gray;
 
 .page__footer {
   color: #fff !important; // override
