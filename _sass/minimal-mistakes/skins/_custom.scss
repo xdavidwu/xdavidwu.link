@@ -19,3 +19,6 @@ $link-color-visited: mix(#000, $link-color, 25%);
 $masthead-link-color: $text-color;
 $masthead-link-color-hover: mix(#000, $text-color, 20%);
 $navicon-link-color-hover: mix(#000, $background-color, 30%);
+$pager-text-color: #fff6fb;
+$pager-text-color-disabled: rgba($pager-text-color, 0.5);
+

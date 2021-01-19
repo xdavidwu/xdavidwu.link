@@ -21,6 +21,8 @@ $light-gray: mix(#fff, $gray, 50%);
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 $code-background-color-dark: $lighter-gray;
 $footer-background-color: #dddddd;
+$pager-text-color: #fff6fb;
+$pager-text-color-disabled: rgba($pager-text-color, 0.5);
 
 .highlight, .highlight.w {
   background-color: $code-background-color;
