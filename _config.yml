@@ -157,12 +157,8 @@ exclude:
   - package-lock.json
   - Rakefile
   - README.md
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
   - webpack.config.js
-keep_files:
-  - .git
-  - .svn
+  - minimal-mistakes-jekyll.gemspec
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
