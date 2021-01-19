@@ -20,7 +20,8 @@ $gray: #7a8288;
 $light-gray: mix(#fff, $gray, 50%);
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 $code-background-color-dark: $lighter-gray;
-$footer-background-color: #fafafa;
+$footer-background-color: #dddddd;
+$muted-text-color: mix(#fff, $text-color, 20%);
 
 .highlight, .highlight.w {
   background-color: $code-background-color;
