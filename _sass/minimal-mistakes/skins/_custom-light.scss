@@ -27,3 +27,7 @@ $pager-text-color-disabled: rgba($pager-text-color, 0.5);
 .highlight, .highlight.w {
   background-color: $code-background-color;
 }
+
+.highlight .gh {
+  background-color: unset;
+}
