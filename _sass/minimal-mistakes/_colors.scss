@@ -1,0 +1,603 @@
+html {
+  scrollbar-color: $primary-color rgba(0, 0, 0, 0);
+  background: $background-color;
+}
+
+body {
+  color: $text-color;
+}
+
+::selection {
+  color: $background-color;
+  background: $masthead-link-color-hover;
+}
+
+a {
+  color: $link-color;
+}
+
+.archive__subtitle, .feature__wrapper, .masthead {
+  border-bottom-color: $border-color;
+}
+
+u, ins, abbr[title], abbr[data-original-title] {
+  border-bottom-color: $text-color;
+}
+
+blockquote {
+  border-left-color: $primary-color;
+}
+
+a {
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  background: $code-background-color;
+}
+
+hr {
+  border-top-color: $border-color;
+}
+
+figcaption {
+  color: $muted-text-color;
+  a:hover {
+    color: $link-color-hover;
+  }
+}
+
+.btn {
+  $buttoncolors:
+  (primary, $primary-color),
+  (inverse, #fff),
+  (light-outline, transparent),
+  (success, $success-color),
+  (warning, $warning-color),
+  (danger, $danger-color),
+  (info, $info-color),
+  (facebook, $facebook-color),
+  (twitter, $twitter-color),
+  (linkedin, $linkedin-color);
+
+  @each $buttoncolor, $color in $buttoncolors {
+    &--#{$buttoncolor} {
+      @include yiq-contrasted($color);
+      @if ($buttoncolor == inverse) {
+        border: 1px solid $border-color;
+      }
+      @if ($buttoncolor == light-outline) {
+        border: 1px solid #fff;
+      }
+
+      &:not(label):hover {
+        @include yiq-contrasted(mix(#000, $color, 20%));
+      }
+    }
+  }
+}
+
+.page__footer {
+  color: $muted-text-color;
+  background: $footer-background-color;
+
+  a {
+    color: inherit;
+  }
+}
+
+.masthead {
+  background: $background-color;
+}
+
+.pagination {
+  li {
+    a {
+      color: $muted-text-color;
+      border-color: mix(#000, $border-color, 25%);
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &.current,
+      &.current.disabled {
+        color: #fff;
+        background: $primary-color;
+      }
+
+      &.disabled {
+        color: rgba($muted-text-color, 0.5);
+      }
+    }
+  }
+
+  &--pager {
+    color: $pager-text-color;
+    background: $primary-color;
+    border-color: $background-color;
+
+    &:visited {
+      color: $pager-text-color;
+    }
+
+    &:hover {
+      background: $primary-color-raised;
+    }
+
+    &.disabled {
+      color: $pager-text-color-disabled;
+      background: $primary-color-disabled;
+    }
+  }
+}
+
+.page__content + .pagination,
+.page__meta + .pagination,
+.page__share + .pagination,
+.page__comments + .pagination {
+  border-top-color: $border-color;
+}
+
+.greedy-nav {
+  background: $background-color;
+
+  a {
+    color: $masthead-link-color;
+
+    &:hover {
+      color: $masthead-link-color-hover;
+    }
+  }
+
+  &__toggle {
+    background: transparent;
+  }
+
+  .hidden-links {
+    border-color: $border-color;
+    background: $background-color;
+
+    a:hover {
+      color: $masthead-link-color-hover;
+      background: $navicon-link-color-hover;
+    }
+
+    &:before {
+      border-color: $border-color transparent;
+    }
+
+    &:after {
+      border-color: $border-color transparent;
+    }
+
+    li {
+      border-bottom-color: $border-color;
+    }
+  }
+}
+
+.nav__list {
+  @include breakpoint(max-width $large - 1px) {
+    label {
+      color: $gray;
+      border-color: $light-gray;
+    }
+
+    &:before,
+    &:after {
+      background: $gray;
+    }
+
+    &:hover {
+      color: #fff;
+      border-color: $gray;
+      background: mix(white, #000, 20%);
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+
+    input:checked + label {
+      color: white;
+      background: mix(white, #000, 20%);
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.nav__list .nav__items {
+  a {
+    color: inherit;
+  }
+}
+
+.nav__sub-title {
+  border-bottom-color: $border-color;
+}
+
+.toc {
+  color: $gray;
+  background: $background-color;
+  border-color: $border-color;
+
+  .nav__title {
+    color: #fff;
+    background: $primary-color;
+  }
+
+  .active a { // scroll spy
+    @include yiq-contrasted($active-color);
+  }
+}
+
+.toc__menu {
+  a {
+    color: $muted-text-color;
+    border-bottom-color: $border-color;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+#follow-button {
+  &:checked + label {
+    background-color: $primary-color-disabled;
+  }
+  &:hover + label {
+    background-color: $primary-color-raised;
+  }
+}
+
+.page__content {
+  h2 {
+    border-bottom-color: $border-color;
+  }
+}
+
+.page__hero {
+  &--overlay {
+    a {
+      color: #fff;
+    }
+
+    .page__title,
+    .page__meta,
+    .page__lead,
+    .btn {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+  }
+}
+
+.page__hero-caption {
+  color: #fff;
+  background: #000;
+
+  a {
+    color: #fff;
+  }
+}
+
+.page__share {
+  border-top-color: $border-color;
+}
+
+.page__meta {
+  color: $muted-text-color;
+
+  a {
+    color: inherit;
+  }
+}
+
+.page__taxonomy-item {
+  border-color: mix(#000, $border-color, 25%);
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.taxonomy__section {
+  &:not(:last-child) {
+    border-bottom-color: $border-color;
+  }
+}
+
+.taxonomy__count, .taxonomy__title {
+  color: $muted-text-color
+}
+
+.taxonomy__index {
+  a {
+    color: inherit;
+    border-bottom-color: $border-color;
+  }
+}
+
+.back-to-top {
+  color: $muted-text-color;
+}
+
+.page__comments-title, .page__related {
+  border-top-color: $border-color;
+}
+
+.page__related {
+  a {
+    color: inherit;
+  }
+}
+
+.search__toggle {
+  color: $primary-color;
+  background: transparent;
+
+  &:hover {
+    color: $primary-color-raised;
+  }
+}
+
+.search-content {
+  &__form {
+    background: transparent;
+  }
+
+  .search-input {
+    background: transparent;
+    color: $text-color;
+  }
+}
+
+.archive__item-title .ais-Highlight {
+  color: $primary-color;
+}
+
+.archive__item-excerpt .ais-Highlight {
+  color: $primary-color;
+}
+
+.author__avatar {
+  img {
+    @include breakpoint($large) {
+      border-color: $border-color;
+    }
+  }
+}
+
+.author__content {
+  a {
+    color: inherit;
+  }
+}
+
+.author__urls {
+  border-color: $border-color;
+  background: $background-color;
+
+  @include breakpoint($large) {
+    background: transparent;
+  }
+
+  &:before, &:after {
+    border-color: $border-color transparent;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+thead {
+  background: $border-color;
+  border-bottom-color: mix(#000, $border-color, 25%);
+}
+
+td {
+  border-bottom-color: mix(#000, $border-color, 25%);
+}
+
+.social-icons {
+  .fas,
+  .fab,
+  .far,
+  .fal {
+    color: $text-color;
+  }
+/*
+  .fa-behance,
+  .fa-behance-square {
+    color: $behance-color;
+  }
+
+  .fa-bitbucket {
+    color: $bitbucket-color;
+  }
+
+  .fa-dribbble,
+  .fa-dribble-square {
+    color: $dribbble-color;
+  }
+
+  .fa-facebook,
+  .fa-facebook-square,
+  .fa-facebook-f {
+    color: $facebook-color;
+  }
+
+  .fa-flickr {
+    color: $flickr-color;
+  }
+
+  .fa-foursquare {
+    color: $foursquare-color;
+  }
+
+  .fa-github,
+  .fa-github-alt,
+  .fa-github-square {
+    color: $github-color;
+  }
+
+  .fa-gitlab {
+    color: $gitlab-color;
+  }
+
+  .fa-instagram {
+    color: $instagram-color;
+  }
+
+  .fa-keybase {
+    color: $keybase-color;
+  }
+
+  .fa-lastfm,
+  .fa-lastfm-square {
+    color: $lastfm-color;
+  }
+
+  .fa-linkedin,
+  .fa-linkedin-in {
+    color: $linkedin-color;
+  }
+
+  .fa-mastodon,
+  .fa-mastodon-square {
+    color: $mastodon-color;
+  }
+
+  .fa-pinterest,
+  .fa-pinterest-p,
+  .fa-pinterest-square {
+    color: $pinterest-color;
+  }
+
+  .fa-reddit {
+    color: $reddit-color;
+  }
+
+  .fa-rss,
+  .fa-rss-square {
+    color: $rss-color;
+  }
+
+  .fa-soundcloud {
+    color: $soundcloud-color;
+  }
+
+  .fa-stack-exchange,
+  .fa-stack-overflow {
+    color: $stackoverflow-color;
+  }
+
+  .fa-tumblr,
+  .fa-tumblr-square {
+    color: $tumblr-color;
+  }
+
+  .fa-twitter,
+  .fa-twitter-square {
+    color: $twitter-color;
+  }
+
+  .fa-vimeo,
+  .fa-vimeo-square,
+  .fa-vimeo-v {
+    color: $vimeo-color;
+  }
+
+  .fa-vine {
+    color: $vine-color;
+  }
+
+  .fa-youtube {
+    color: $youtube-color;
+  }
+
+  .fa-xing,
+  .fa-xing-square {
+    color: $xing-color;
+  }*/
+}
+
+.navicon {
+  background: $primary-color;
+  &:before, &:after {
+    background: $primary-color;
+  }
+}
+
+.close .navicon {
+  background: transparent;
+}
+
+.greedy-nav__toggle {
+  &:before {
+    background: $background-color;
+  }
+}
+
+.greedy-nav__toggle:hover {
+  .navicon,
+  .navicon:before,
+  .navicon:after {
+    background: mix(#000, $primary-color, 25%);
+  }
+
+  &.close {
+    .navicon {
+      background: transparent;
+    }
+  }
+}
+
+.well {
+  background: #f5f5f5;
+  border-color: #e3e3e3;
+}
+
+.show-modal {
+  &:before {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.modal {
+  background: #fff;
+  border-color: $border-color;
+  &__actions {
+    border-top-color: $border-color;
+  }
+}
+
+.footnote, .footnotes {
+  color: mix(#fff, $gray, 25%);
+}
+
+a.reversefootnote {
+  color: $gray;
+}
+
+.required {
+  color: $danger-color;
+}

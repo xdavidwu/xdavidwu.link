@@ -33,7 +33,8 @@
 .archive__subtitle {
   margin: 0.75rem 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid $border-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
@@ -237,7 +238,8 @@
 .feature__wrapper {
   @include clearfix();
   margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 
   .archive__item-title {
     margin-bottom: 0;

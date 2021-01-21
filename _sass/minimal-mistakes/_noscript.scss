@@ -15,10 +15,4 @@
 
 #follow-button {
   display: none;
-  &:checked + label {
-    background-color: $primary-color-disabled;
-  }
-  &:hover + label {
-    background-color: $primary-color-raised;
-  }
 }

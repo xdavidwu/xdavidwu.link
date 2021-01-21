@@ -8,10 +8,8 @@
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  color: $muted-text-color;
   animation: $intro-transition;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
 
   footer {
     @include clearfix;
@@ -24,10 +22,6 @@
     @include breakpoint($x-large) {
       max-width: $x-large;
     }
-  }
-
-  a {
-    color: inherit;
   }
 }
 

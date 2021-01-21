@@ -3,12 +3,12 @@
    ========================================================================== */
 
 .masthead {
-  border-bottom: 1px solid $border-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   animation: $intro-transition;
   animation-delay: 0.15s;
   z-index: 20;
 	position: sticky;
-	background: $background-color;
 	top: 0;
 
   &__inner-wrap {

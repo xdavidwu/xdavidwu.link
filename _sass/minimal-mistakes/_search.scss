@@ -14,14 +14,8 @@
   height: $nav-toggle-height;
   border: 0;
   outline: none;
-  color: $primary-color;
-  background-color: transparent;
   cursor: pointer;
   transition: 0.2s;
-
-  &:hover {
-    color: $primary-color-raised;
-  }
 }
 
 .search-icon {
@@ -41,11 +35,6 @@
     @include breakpoint($x-large) {
       max-width: $max-width;
     }
-
-  }
-
-  &__form {
-    background-color: transparent;
   }
 
   .search-input {
@@ -55,9 +44,7 @@
     border: none;
     outline: none;
     box-shadow: none;
-    background-color: transparent;
     font-size: $type-size-3;
-    color: $text-color;
 
     @include breakpoint($large) {
       font-size: $type-size-2;
@@ -106,13 +93,11 @@
 }
 
 .archive__item-title .ais-Highlight {
-  color: $primary-color;
   font-style: normal;
   text-decoration: underline;
 }
 
 .archive__item-excerpt .ais-Highlight {
-  color: $primary-color;
   font-style: normal;
   font-weight: bold;
 }

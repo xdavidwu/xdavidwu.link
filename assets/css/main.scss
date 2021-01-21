@@ -13,7 +13,7 @@ $comments-provider: {{ site.comments.provider }};
 
 @media (prefers-color-scheme: light) {
 	@import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
-  @import "minimal-mistakes"; // main partials
+  @import "minimal-mistakes/colors"; // color overrides
 }
 
 
