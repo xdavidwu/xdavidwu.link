@@ -391,8 +391,12 @@ figcaption {
     background: transparent;
   }
 
-  &:before, &:after {
+  &:before {
     border-color: $border-color transparent;
+  }
+
+  &:after {
+    border-color: $background-color transparent;
   }
 
   a {
