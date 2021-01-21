@@ -16,16 +16,16 @@ a {
   color: $link-color;
 }
 
-.archive__subtitle, .feature__wrapper, .masthead {
-  border-bottom-color: $border-color;
+.archive__subtitle, .feature__wrapper, .masthead, hr {
+  border-color: $border-color;
 }
 
 u, ins, abbr[title], abbr[data-original-title] {
-  border-bottom-color: $text-color;
+  border-color: $text-color;
 }
 
 blockquote {
-  border-left-color: $primary-color;
+  border-color: $primary-color;
 }
 
 a {
@@ -44,10 +44,6 @@ li > code,
 figcaption > code,
 td > code {
   background: $code-background-color;
-}
-
-hr {
-  border-top-color: $border-color;
 }
 
 figcaption {
@@ -146,7 +142,7 @@ figcaption {
 .page__meta + .pagination,
 .page__share + .pagination,
 .page__comments + .pagination {
-  border-top-color: $border-color;
+  border-color: $border-color;
 }
 
 .greedy-nav {
@@ -182,7 +178,7 @@ figcaption {
     }
 
     li {
-      border-bottom-color: $border-color;
+      border-color: $border-color;
     }
   }
 }
@@ -229,7 +225,7 @@ figcaption {
 }
 
 .nav__sub-title {
-  border-bottom-color: $border-color;
+  border-color: $border-color;
 }
 
 .toc {
@@ -250,7 +246,7 @@ figcaption {
 .toc__menu {
   a {
     color: $muted-text-color;
-    border-bottom-color: $border-color;
+    border-color: $border-color;
 
     &:hover {
       color: $text-color;
@@ -260,16 +256,16 @@ figcaption {
 
 #follow-button {
   &:checked + label {
-    background-color: $primary-color-disabled;
+    background: $primary-color-disabled;
   }
   &:hover + label {
-    background-color: $primary-color-raised;
+    background: $primary-color-raised;
   }
 }
 
 .page__content {
   h2 {
-    border-bottom-color: $border-color;
+    border-color: $border-color;
   }
 }
 
@@ -299,7 +295,7 @@ figcaption {
 }
 
 .page__share {
-  border-top-color: $border-color;
+  border-color: $border-color;
 }
 
 .page__meta {
@@ -320,7 +316,7 @@ figcaption {
 
 .taxonomy__section {
   &:not(:last-child) {
-    border-bottom-color: $border-color;
+    border-color: $border-color;
   }
 }
 
@@ -331,7 +327,7 @@ figcaption {
 .taxonomy__index {
   a {
     color: inherit;
-    border-bottom-color: $border-color;
+    border-color: $border-color;
   }
 }
 
@@ -340,7 +336,7 @@ figcaption {
 }
 
 .page__comments-title, .page__related {
-  border-top-color: $border-color;
+  border-color: $border-color;
 }
 
 .page__related {
@@ -410,11 +406,11 @@ figcaption {
 
 thead {
   background: $border-color;
-  border-bottom-color: mix(#000, $border-color, 25%);
+  border-color: mix(#000, $border-color, 25%);
 }
 
 td {
-  border-bottom-color: mix(#000, $border-color, 25%);
+  border-color: mix(#000, $border-color, 25%);
 }
 
 .social-icons {
@@ -586,7 +582,7 @@ td {
   background: #fff;
   border-color: $border-color;
   &__actions {
-    border-top-color: $border-color;
+    border-color: $border-color;
   }
 }
 
