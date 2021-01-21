@@ -11,17 +11,13 @@
 	position: sticky;
 	top: 0;
   @include clearfix;
-  padding: 0.625em 0 0.625em 1em;
+  padding: 0.625em 1em;
   display: flex;
   align-items: center;
   min-height: $nav-height;
 
   @include breakpoint($x-large) {
     max-width: $max-width;
-  }
-
-  nav {
-    z-index: 10;
   }
 
   a {
@@ -48,6 +44,7 @@
   }
 
   .greedy-nav__toggle {
+    margin-left: 1rem;
     align-self: center;
     height: $nav-toggle-height;
     border: 0;
@@ -147,6 +144,15 @@
 .site-subtitle {
   display: block;
   font-size: $type-size-8;
+}
+
+.search__toggle {
+  margin-left: 1rem;
+  height: $nav-toggle-height;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .masthead__menu-item {
