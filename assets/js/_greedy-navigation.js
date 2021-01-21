@@ -41,7 +41,6 @@ function check() {
     check();
   }
   // Update the button accordingly
-  $btn.setAttribute("count", numOfItems - numOfVisibleItems);
   if (numOfVisibleItems === numOfItems) {
     $btn.classList.add('hidden');
   } else $btn.classList.remove('hidden');
