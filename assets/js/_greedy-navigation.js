@@ -11,7 +11,6 @@ const $hlinks = document.querySelector("nav.greedy-nav .hidden-links");
 
 var numOfItems = 0;
 var totalSpace = 0;
-var closingTime = 1000;
 var breakWidths = [];
 
 // Get initial state
@@ -21,7 +20,7 @@ for (i of $vlinks.children) {
   breakWidths.push(totalSpace);
 }
 
-var availableSpace, numOfVisibleItems, requiredSpace, timer;
+var availableSpace, numOfVisibleItems, requiredSpace;
 
 function check() {
 
@@ -55,18 +54,6 @@ window.addEventListener('resize', () => {
 
 $btn.addEventListener('click', () => {
   $hlinks.classList.toggle('hidden');
-  clearTimeout(timer);
-});
-
-$hlinks.addEventListener('mouseleave', () => {
-  // Mouse has left, start the timer
-  timer = setTimeout(function() {
-    $hlinks.classList.add('hidden');
-  }, closingTime);
-});
-$hlinks.addEventListener('mouseenter', () => {
-  // Mouse is back, cancel the timer
-  clearTimeout(timer);
 });
 
 check();
