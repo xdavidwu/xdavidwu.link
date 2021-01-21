@@ -53,6 +53,7 @@ window.addEventListener('resize', () => {
 
 $btn.addEventListener('click', () => {
   $hlinks.classList.toggle('hidden');
+  $btn.classList.toggle('close');
 });
 
 check();
