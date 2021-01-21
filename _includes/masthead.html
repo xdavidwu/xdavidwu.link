@@ -1,6 +1,6 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
-<nav id="site-nav" class="greedy-nav masthead">
+<nav id="site-nav" class="greedy-nav">
   {% unless logo_path == empty %}
     <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a>
   {% endunless %}

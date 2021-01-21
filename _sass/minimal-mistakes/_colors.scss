@@ -16,7 +16,7 @@ a {
   color: $link-color;
 }
 
-.archive__subtitle, .feature__wrapper, .masthead, hr {
+.archive__subtitle, .feature__wrapper, .greedy-nav, hr {
   border-color: $border-color;
 }
 
@@ -90,10 +90,6 @@ figcaption {
   a {
     color: inherit;
   }
-}
-
-.masthead {
-  background: $background-color;
 }
 
 .pagination {
