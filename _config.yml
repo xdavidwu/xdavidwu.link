@@ -140,12 +140,12 @@ footer:
     - label: "Instagram"
       icon: "fa fa-fw fa-instagram"
       # url:
-    - label: "Back to top"
-      icon: "fa fa-fw fa-angle-double-up"
-      url: "#"
     - label: "Feed"
       icon: "fa fa-fw fa-rss-square"
       url: "/feed.xml"
+    - label: "Back to top"
+      icon: "fa fa-fw fa-angle-double-up"
+      url: "#"
 
 
 # Reading Files
