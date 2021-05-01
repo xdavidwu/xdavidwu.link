@@ -142,6 +142,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Back to top"
+      icon: "fab fa-fw fa-angle-double-up"
+      url: "#"
 
 
 # Reading Files
