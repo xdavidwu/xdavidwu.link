@@ -52,8 +52,6 @@ comments:
 reCaptcha:
   siteKey:
   secret:
-atom_feed:
-  path: # blank (default) uses feed.xml
 search: true # true, false (default)
 search_full_content: false # true, false (default)
 search_provider: "lunr" # lunr (default), algolia, google
@@ -145,6 +143,9 @@ footer:
     - label: "Back to top"
       icon: "fab fa-fw fa-angle-double-up"
       url: "#"
+    - label: "Feed"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/feed.xml"
 
 
 # Reading Files
