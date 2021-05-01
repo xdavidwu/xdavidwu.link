@@ -101,50 +101,50 @@ author:
   email:
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fa fa-envelope-square"
       url: "mailto:xdavidwuph@gmail.com"
     - label: "PGP"
-      icon: "fas fa-fw fa-lock"
+      icon: "fa fa-lock"
       url: "/pgp-public-key.txt"
     - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+      icon: "fa fa-gitlab"
       url: "https://gitlab.eglo.ga/xdavidwu/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fa fa-github"
       url: "https://github.com/xdavidwu/"
     - label: "Matrix"
-      icon: "fab fa-fw fa-matrix-org"
+      icon: "fa fa-matrix-org"
       url: "https://matrix.to/#/@xdavidwu:eglo.ga"
     - label: "Pleroma"
-      icon: "fab fa-fw fa-pleroma"
+      icon: "fa fa-pleroma"
       url: "https://pleroma.eglo.ga/xdavidwu"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fa fa-twitter-square"
       # url:
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+      icon: "fa fa-facebook-square"
       # url:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fa fa-github"
       # url:
     - label: "Source code"
-      icon: "fab fa-fw fa-gitlab"
+      icon: "fa fa-gitlab"
       url: "https://gitlab.eglo.ga/xdavidwu/xdavidwu.eglo.ga"
     - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
+      icon: "fa fa-bitbucket"
       # url:
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fa fa-instagram"
       # url:
     - label: "Back to top"
-      icon: "fab fa-fw fa-angle-double-up"
+      icon: "fa fa-angle-double-up"
       url: "#"
     - label: "Feed"
-      icon: "fas fa-fw fa-rss-square"
+      icon: "fa fa-rss-square"
       url: "/feed.xml"
 
 
