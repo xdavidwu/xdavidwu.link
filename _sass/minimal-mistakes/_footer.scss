@@ -40,6 +40,10 @@
     display: inline-block;
     font-size: $type-size-6;
     text-transform: uppercase;
+
+    i {
+      margin-right: 4px;
+    }
   }
 
   li + li {
