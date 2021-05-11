@@ -7,10 +7,7 @@
   padding: 0 1em;
   animation: $intro-transition;
   animation-delay: 0.15s;
-
-  @include breakpoint($x-large) {
-    max-width: $max-width;
-  }
+  width: 100%;
 }
 
 body {
@@ -23,6 +20,11 @@ body {
 .initial-content,
 .search-content {
   flex: 1 0 auto;
+  width: 100%;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
 }
 
 .page {

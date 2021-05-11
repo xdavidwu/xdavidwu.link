@@ -19,11 +19,6 @@
   padding: 1em;
   animation: $intro-transition;
   animation-delay: 0.15s;
-  width: 100%;
-
-  @include breakpoint($x-large) {
-    max-width: $max-width;
-  }
 
   .search-input {
     display: block;
