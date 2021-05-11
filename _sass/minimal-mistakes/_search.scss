@@ -16,15 +16,12 @@
 .search-content {
   display: none;
   visibility: hidden;
+  padding: 1em;
+  animation: $intro-transition;
+  animation-delay: 0.15s;
 
-  &__inner-wrap {
-    padding: 1em;
-    animation: $intro-transition;
-    animation-delay: 0.15s;
-
-    @include breakpoint($x-large) {
-      max-width: $max-width;
-    }
+  @include breakpoint($x-large) {
+    max-width: $max-width;
   }
 
   .search-input {
