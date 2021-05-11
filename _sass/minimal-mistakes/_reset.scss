@@ -135,3 +135,7 @@ input[type="search"] { /* Appearance in Safari/Chrome*/
 textarea {
   vertical-align: top; /* readability and alignment cross-browser*/
 }
+
+::-webkit-search-cancel-button {
+  display: none;
+}
