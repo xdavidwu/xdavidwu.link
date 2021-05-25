@@ -19,11 +19,15 @@
     {% include_cached browser-upgrade.html %}
 
     <input type="checkbox" id="darkmode">
+    <input type="checkbox" id="lightmode">
 
     <div>
       <div class="top-flex">
         <label for="darkmode">
-          <i class="fa fa-moon"></i>
+          <i class="fa fa-moon-o"></i>
+        </label>
+        <label for="lightmode">
+          <i class="fa fa-sun-o"></i>
         </label>
 
         {% include_cached masthead.html %}

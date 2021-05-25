@@ -11,12 +11,35 @@ $comments-provider: {{ site.comments.provider }};
 
 @import "minimal-mistakes"; // main partials
 
+label[for="darkmode"] {
+  display: none;
+}
+
+label[for="lightmode"] {
+  display: block;
+}
+
 @media (prefers-color-scheme: light) {
+  label[for="darkmode"] {
+    display: block;
+  }
+
+  label[for="lightmode"] {
+    display: none;
+  }
+
   @import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
   @import "minimal-mistakes/colors"; // color overrides
 }
 
-input#darkmode:checked ~ * {
-  @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+input#lightmode:checked ~ * {
+  @import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
   @import "minimal-mistakes/colors"; // color overrides
+}
+
+@media (prefers-color-scheme: light) {
+  input#darkmode:checked ~ * {
+    @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+    @import "minimal-mistakes/colors"; // color overrides
+  }
 }

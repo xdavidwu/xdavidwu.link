@@ -17,11 +17,11 @@ input#follow-button {
   display: none;
 }
 
-input#darkmode {
+input#darkmode, input#lightmode {
   display: none;
 }
 
-label[for="darkmode"] {
+label[for="darkmode"], label[for="lightmode"] {
   position: absolute;
   z-index: 1000;
   bottom: 1.75em;
