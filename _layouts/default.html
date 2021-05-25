@@ -23,23 +23,27 @@
       <i class="fa fa-moon"></i>
     </label>
 
-    {% include_cached masthead.html %}
+    <div class="top-flex">
 
-    <div class="initial-content">
-      {{ content }}
-    </div>
+      {% include_cached masthead.html %}
 
-    {% if site.search == true %}
-      <div class="search-content">
-        {% include_cached search/search_form.html %}
+      <div class="initial-content">
+        {{ content }}
       </div>
-    {% endif %}
 
-    <div id="footer" class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include_cached footer.html %}
-      </footer>
+      {% if site.search == true %}
+        <div class="search-content">
+          {% include_cached search/search_form.html %}
+        </div>
+      {% endif %}
+
+      <div id="footer" class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include_cached footer.html %}
+        </footer>
+      </div>
+
     </div>
 
     {% include scripts.html %}
