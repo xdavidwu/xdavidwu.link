@@ -9,10 +9,21 @@
   }
 }
 
-#follow-button:checked + label + ul.author__urls {
+input#follow-button:checked + label + ul.author__urls {
   display: block;
 }
 
-#follow-button {
+input#follow-button {
   display: none;
+}
+
+input#darkmode {
+  display: none;
+}
+
+label[for="darkmode"] {
+  position: absolute;
+  z-index: 1000;
+  bottom: 1.75em;
+  right: 1em;
 }

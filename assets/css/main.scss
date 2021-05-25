@@ -16,4 +16,7 @@ $comments-provider: {{ site.comments.provider }};
   @import "minimal-mistakes/colors"; // color overrides
 }
 
-
+input#darkmode:checked ~ * {
+  @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+  @import "minimal-mistakes/colors"; // color overrides
+}
