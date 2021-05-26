@@ -4,7 +4,6 @@
     "pack": "webpack -p"
   },
   "devDependencies": {
-    "gumshoejs": "^5.1.2",
     "jquery": "^3.5.1",
     "magnific-popup": "^1.1.0",
     "webpack": "^4.44.2",
