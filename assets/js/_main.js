@@ -91,13 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   })*/;
 
-  document.getElementById('darkmode').addEventListener('click', () => {
-    DISQUS.reset({reload: true});
-    window.localStorage.setItem('darkmode', this.checked.toString());
+  document.getElementById('darkmode').addEventListener('click', (e) => {
+    if (typeof DISQUS !== 'undefined') {
+      DISQUS.reset({reload: true});
+    }
+    window.localStorage.setItem('darkmode', e.currentTarget.checked.toString());
   });
-  document.getElementById('lightmode').addEventListener('click', () => {
-    DISQUS.reset({reload: true});
-    window.localStorage.setItem('lightmode', this.checked.toString());
+  document.getElementById('lightmode').addEventListener('click', (e) => {
+    if (typeof DISQUS !== 'undefined') {
+      DISQUS.reset({reload: true});
+    }
+    window.localStorage.setItem('lightmode', e.currentTarget.checked.toString());
   });
 
   if (window.localStorage.getItem('lightmode') === 'true') {
