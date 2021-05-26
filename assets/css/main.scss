@@ -32,13 +32,13 @@ label[for="lightmode"] {
   @import "minimal-mistakes/colors"; // color overrides
 }
 
-input#lightmode:checked ~ * {
+input#lightmode:checked ~ div {
   @import "minimal-mistakes/skins/{{ site.minimal_mistakes_light_skin | default: 'default' }}"; // skin
   @import "minimal-mistakes/colors"; // color overrides
 }
 
 @media (prefers-color-scheme: light) {
-  input#darkmode:checked ~ * {
+  input#darkmode:checked ~ div {
     @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
     @import "minimal-mistakes/colors"; // color overrides
   }
