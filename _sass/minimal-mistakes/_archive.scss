@@ -131,6 +131,7 @@
    Grid view
    ========================================================================== */
 .grid__wrapper {
+  margin-bottom: 2em;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -146,7 +147,6 @@
 }
 
 .grid__item {
-  margin-bottom: 2em;
   overflow: hidden;
 
   .page__meta {
