@@ -93,8 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('darkmode').addEventListener('click', () => {
     DISQUS.reset({reload: true});
+    window.localStorage.setItem('darkmode', this.checked.toString());
   });
   document.getElementById('lightmode').addEventListener('click', () => {
     DISQUS.reset({reload: true});
+    window.localStorage.setItem('lightmode', this.checked.toString());
   });
+
+  if (window.localStorage.getItem('lightmode') === 'true') {
+    document.getElementById('lightmode').checked = true;
+  }
+  if (window.localStorage.getItem('darkmode') === 'true') {
+    document.getElementById('darkmode').checked = true;
+  }
 });
