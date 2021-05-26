@@ -90,4 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   })*/;
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    DISQUS.reset({reload: true});
+  });
+  document.getElementById('lightmode').addEventListener('click', () => {
+    DISQUS.reset({reload: true});
+  });
 });
