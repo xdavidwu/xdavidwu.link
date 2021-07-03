@@ -29,6 +29,7 @@ spec:
   allowedHostPaths:
     - pathPrefix: /etc
     - pathPrefix: /usr
+    - pathPrefix: /var/lib/etcd
   forbiddenSysctls:
     - '*'
   hostIPC: false
