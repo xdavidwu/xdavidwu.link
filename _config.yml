@@ -33,7 +33,7 @@ masthead_title: # overrides the website title displayed in the masthead, use " "
 # breadcrumbs: false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider: "matrix" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname: "parto-blog" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -49,6 +49,12 @@ comments:
   staticman:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
+  matrix:
+    homeserver_url: "https://eglo.ga"
+    homeserver: "eglo.ga"
+    site: "xdavidwu.eglo.ga"
+    admin: "@xdavidwu:eglo.ga"
+    bot: "@xdavidwu.eglo.ga-comment-bot:eglo.ga"
 reCaptcha:
   siteKey:
   secret:

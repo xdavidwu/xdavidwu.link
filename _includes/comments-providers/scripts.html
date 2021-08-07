@@ -12,6 +12,8 @@
     {% include /comments-providers/staticman_v2.html %}
   {% when "utterances" %}
     {% include /comments-providers/utterances.html %}
+  {% when "matrix" %}
+    {% include /comments-providers/matrix.html %}
   {% when "custom" %}
     {% include /comments-providers/custom_scripts.html %}
 {% endcase %}

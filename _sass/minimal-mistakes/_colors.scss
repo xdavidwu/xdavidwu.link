@@ -597,3 +597,15 @@ a.reversefootnote {
 .required {
   color: $danger-color;
 }
+
+@if $comments-provider == matrix {
+  .cactus-login-form {
+    background-color: $background-color;
+  }
+  .cactus-login-field {
+    > input {
+      border-color: $border-color;
+      color: $text-color;
+    }
+  }
+}

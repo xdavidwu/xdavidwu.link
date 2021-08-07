@@ -1,0 +1,10 @@
+<script>
+  initComments({
+    node: document.getElementById('comment-section'),
+    defaultHomeserverUrl: 'https://matrix-client.matrix.org',
+    serverName: '{{ site.comments.matrix.homeserver }}',
+    siteName: '{{ site.comments.matrix.site }}',
+    commentSectionId: '{{ page.url }}',
+    guestPostingEnabled: false,
+  })
+</script>

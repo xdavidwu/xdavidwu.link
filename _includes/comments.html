@@ -155,6 +155,9 @@
     {% when "utterances" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="utterances-comments"></section>
+    {% when "matrix" %}
+      <h4 class="page__comments-title">Comments on Matrix #comments_{{ site.comments.matrix.site }}_{{ page.url }}:{{ site.comments.matrix.homeserver }}</h4>
+      <div id="comment-section"></div>
     {% when "custom" %}
       {% include /comments-providers/custom.html %}
   {% endcase %}
