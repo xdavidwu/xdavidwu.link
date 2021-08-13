@@ -411,8 +411,21 @@
     }
   }
 
+  .cactus-comment {
+    font-size: $type-size-6;
+  }
+
   .cactus-comment-avatar {
     flex-shrink: 0;
+
+    > p {
+      line-height: 2rem;
+    }
+
+    > * {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   .cactus-comment-body {
