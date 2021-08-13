@@ -410,4 +410,14 @@
       outline: none;
     }
   }
+
+  .cactus-comment-avatar {
+    flex-shrink: 0;
+  }
+
+  .cactus-comment-body {
+    > * {
+      white-space: unset;
+    }
+  }
 }
