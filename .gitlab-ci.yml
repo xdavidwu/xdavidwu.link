@@ -12,17 +12,17 @@ gemini:
     - cd _posts
     - >
       for i in $(ls -r *.md);do
-        OIFS=$IFS
+        OIFS="$IFS"
         IFS=$'\n'
-        mv $i $i.orig
-        for line in $(cat $i.orig);do
-          F=$(echo "$line" | sed 's/^{% include_relative \(.*\) %}$/\1/')
+        mv "$i" "${i}.orig"
+        while read LINE;do
+          F=$(echo "$LINE" | sed 's/^{% include_relative \(.*\) %}$/\1/')
           if [ -f "$F" ];then
-            cat $F >> $i
+            cat "$F" >> "$i"
           else
-            printf "%s\n" "$line" >> $i
+            printf "%s\n" "$LINE" >> "$i"
           fi
-        done
+        done < "${i}.orig"
         IFS=$OIFS
         echo "=> $(echo $i | sed s/\.md$/.gmi/) $(echo $i | cut -f 1-3 -d '-'): $(grep '^title:' $i | cut -f 2 -d \")" >> ../gemini/index.gmi
       done
