@@ -156,7 +156,7 @@
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section id="utterances-comments"></section>
     {% when "matrix" %}
-      <h4 class="page__comments-title">Comments on Matrix #comments_{{ site.comments.matrix.site }}_{{ page.url }}:{{ site.comments.matrix.homeserver }}</h4>
+      <h4 class="page__comments-title">Comments on Matrix <a href="matrix:r/comments_{{ site.comments.matrix.site | url_encode }}_{{ page.url | url_encode }}:{{ site.comments.matrix.homeserver | url_encode }}">#comments_{{ site.comments.matrix.site }}_{{ page.url }}:{{ site.comments.matrix.homeserver }}</a></h4>
       <div id="comment-section"></div>
     {% when "custom" %}
       {% include /comments-providers/custom.html %}
