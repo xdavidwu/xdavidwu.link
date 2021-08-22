@@ -12,7 +12,7 @@ I have changed the commenting platform from Disqus to one based on Matrix.
 
 There are Matrix rooms for each posts, and you can comment by either the embedded web frontend or any Matrix client. Room aliases are located above the embedded web frontend.
 
-You can also browse all comment rooms from Matrix Space at \#comments\_xdavidwu.eglo.ga:eglo.ga
+You can also browse all comment rooms from Matrix Space at \#comments\_xdavidwu.link:xdavidwu.link
 
 Here is the story behind this:
 
@@ -32,6 +32,6 @@ Later, I learned about Matrix, the federated messaging protocol that supported l
 
 To make this work, I need an embeddable web client with a simple UI and ability to view as guest. This had been in my todo (with low priority though) until I discovered [Cactus Comments](https://cactus.chat/). They had the same idea of using Matrix room for commenting platform and they already built it! But I do not like thier method for creating the rooms. If I understand the code correctly, they hook into homeserver by appservice API, and create the room when an alias that does not exists is queried. This can be abused to create many unwanted rooms and bring troubles to site owner and homeserver admin. The use of appservice API also make it harder to deploy.
 
-So I use their web client, and create the rooms in my own way. I write a hook for the static-site generator I am using (Jekyll), and it provisions rooms when building the site. This is done under a new user, and it will invite me to become an admin in newly created room. All room creations happen automatically under my control. If interested, see `_plugins/matrix-room-provision.rb` of the site [source code](https://gitlab.eglo.ga/xdavidwu/xdavidwu.eglo.ga/-/blob/master/_plugins/matrix-room-provision.rb).
+So I use their web client, and create the rooms in my own way. I write a hook for the static-site generator I am using (Jekyll), and it provisions rooms when building the site. This is done under a new user, and it will invite me to become an admin in newly created room. All room creations happen automatically under my control. If interested, see `_plugins/matrix-room-provision.rb` of the site [source code](https://gitlab.xdavidwu.link/xdavidwu/xdavidwu.xdavidwu.link/-/blob/master/_plugins/matrix-room-provision.rb).
 
 There are still many spaces for improvements, like more CSS work to make the experience more immersive to this site, and support of login mechanisms other than native username / password.

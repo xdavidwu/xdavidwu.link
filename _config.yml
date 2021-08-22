@@ -50,11 +50,11 @@ comments:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
   matrix:
-    homeserver_url: "https://eglo.ga"
-    homeserver: "eglo.ga"
-    site: "xdavidwu.eglo.ga"
-    admin: "@xdavidwu:eglo.ga"
-    bot: "@xdavidwu.eglo.ga-comment-bot:eglo.ga"
+    homeserver_url: "https://xdavidwu.link"
+    homeserver: "xdavidwu.link"
+    site: "xdavidwu.link"
+    admin: "@xdavidwu:xdavidwu.link"
+    bot: "@comment-bot:xdavidwu.link"
 reCaptcha:
   siteKey:
   secret:
@@ -120,7 +120,7 @@ author:
       url: "https://github.com/xdavidwu/"
     - label: "Matrix"
       icon: "fa fa-fw fa-matrix-org"
-      url: "https://matrix.to/#/@xdavidwu:eglo.ga"
+      url: "https://matrix.to/#/@xdavidwu:xdavidwu.link"
     - label: "Pleroma"
       icon: "fa fa-fw fa-pleroma"
       url: "https://pleroma.xdavidwu.link/xdavidwu"

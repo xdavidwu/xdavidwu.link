@@ -1,4 +1,4 @@
-# xdavidwu.eglo.ga
+# xdavidwu.link
 
 Content is CC-BY-SA 4.0. Code is MIT.
 
