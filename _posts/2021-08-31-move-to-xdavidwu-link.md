@@ -10,7 +10,7 @@ tags:
 
 以這段期間的使用經驗, freenom 提供的 nameserver 功能偏少, 不能添加 wildcard record, 能加入的 record type 偏少, 並且不太可靠, 偶爾會 SRVFAIL
 
-評估之後, 終究是得付費的, 所以找了別家買了個 xdavidwu.link, 不過我的 infrastruture 是與別人共用的, 這個網域還是可能會幫忙架些我信任的朋友的服務
+評估之後, 終究是得付費的, 所以找了別家買了個 xdavidwu.link, 不過我的 infrastructure 是與別人共用的, 這個網域還是可能會幫忙架些我信任的朋友的服務
 
 注意我的 Matrix 和 ActivityPub 也一律轉移了, 最近上線的 Matrix 留言區也是
 
