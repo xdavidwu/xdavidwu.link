@@ -102,6 +102,7 @@ analytics:
 author:
   name: "xdavidwu"
   avatar: /assets/img/avatar.jpg
+  home: /about/
   bio: "Always debugging."
   location:
   email:
