@@ -101,7 +101,7 @@ analytics:
 # Site Author
 author:
   name: "xdavidwu"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: /assets/img/avatar.jpg
   bio: "Always debugging."
   location:
   email:
