@@ -27,7 +27,7 @@ This is about user-facing package manager features. Some package managers select
 
 ##### Package format
 
-A simple internal format for packages is easier to debug, and may makes things easier when fixing a broken installation. Packages of pacman (`*.pkg.tar(.*)`) and apk (`*.apk`) are just tarball archives of its content with additional metadata written in fixed paths of the archives. For temporary fixes of broken package management tools install, we can just extract them as tarballs to root directory, without actually involving package management tools, then reinstall the packages using normal workflow with now working tools.
+A simple internal format for packages is easier to debug, and may makes things easier when fixing a broken installation. Packages of pacman (`*.pkg.tar(.*)`) and apk (`*.apk`) are basically tarball archives of its content with package metadata written in fixed paths of the archives. For lazy, temporary fixes of broken package management tools install, we can just extract them as tarballs to root directory, without actually involving package management tools, then reinstall the packages using normal workflow with now working tools.
 
 #### Packaging convention
 
