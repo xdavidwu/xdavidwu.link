@@ -32,7 +32,6 @@ input#darkmode, input#lightmode {
     opacity: 0;
     transition: $global-transition;
     pointer-events: none;
-    background: $background-color;
   }
 }
 

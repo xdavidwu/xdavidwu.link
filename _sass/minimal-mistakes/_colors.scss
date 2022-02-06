@@ -558,6 +558,10 @@ td {
   }
 }
 
+.greedy-nav__toggle:before, input#follow-button + label:before {
+  background: $background-color;
+}
+
 .well {
   background: #f5f5f5;
   border-color: #e3e3e3;
