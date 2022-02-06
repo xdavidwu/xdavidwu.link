@@ -544,12 +544,6 @@ td {
   background: transparent;
 }
 
-.greedy-nav__toggle {
-  &:before {
-    background: $background-color;
-  }
-}
-
 .greedy-nav__toggle:hover {
   .navicon,
   .navicon:before,

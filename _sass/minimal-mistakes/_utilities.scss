@@ -248,28 +248,6 @@ body:hover .visually-hidden button {
   }
 }
 
-.greedy-nav__toggle {
-  &:before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: $global-transition;
-    pointer-events: none;
-  }
-
-  &.close {
-    &:before {
-      opacity: 0.9;
-      transition: $global-transition;
-      pointer-events: auto;
-    }
-  }
-}
-
 /*
    Sticky, fixed to top content
    ========================================================================== */

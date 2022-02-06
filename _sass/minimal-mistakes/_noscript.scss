@@ -21,24 +21,24 @@ input#darkmode, input#lightmode {
   display: none;
 }
 
-input#follow-button + label {
-  &:before {
-    @supports (pointer-events: none) {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
+.greedy-nav__toggle:before, input#follow-botton:checked + label:before {
+  @supports (pointer-events: none) {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: $global-transition;
+    pointer-events: none;
+    background: $background-color;
   }
 }
 
-input#follow-button:checked + label {
-  &:before {
-    pointer-events: auto;
-  }
+.greedy-nav__toggle.close:before, input#follow-button:checked + label:before {
+  opacity: 0.9;
+  pointer-events: auto;
 }
 
 label[for="darkmode"], label[for="lightmode"] {
