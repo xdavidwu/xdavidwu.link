@@ -27,6 +27,9 @@
 
 .page__footer-copyright {
   font-size: $type-size-7;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .page__footer-follow {
