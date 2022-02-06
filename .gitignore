@@ -27,3 +27,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+assets/fonts
+assets/js/lunr/lunr.min.js
+assets/css/fork-awesome.min.css
