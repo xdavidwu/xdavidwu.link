@@ -3,12 +3,6 @@
   "scripts": {
     "pack": "webpack -p"
   },
-  "devDependencies": {
-    "jquery": "^3.5.1",
-    "magnific-popup": "^1.1.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
-  },
   "dependencies": {
     "lunr": "^2.3.9"
   }
