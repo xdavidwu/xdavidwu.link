@@ -21,7 +21,7 @@ input#darkmode, input#lightmode {
   display: none;
 }
 
-.greedy-nav__toggle:before, input#follow-botton + label:before {
+.greedy-nav__toggle:before, input#follow-button + label:before {
   @supports (pointer-events: none) {
     content: '';
     position: fixed;
