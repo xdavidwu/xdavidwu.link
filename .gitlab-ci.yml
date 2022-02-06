@@ -31,9 +31,23 @@ gemini:
     paths:
       - gemini
 
+npm-vendor:
+  stage: build
+  image: alpine:latest
+  before_script:
+    - apk add npm
+  script:
+    - npm ci
+    - npm run copy-vendor
+  artifacts:
+    paths:
+      - assets/js/lunr/lunr.min.js
+
 pages:
   stage: deploy
   image: ruby:alpine
+  needs:
+    - npm-vendor
   variables:
     JEKYLL_ENV: production
     LC_ALL: "C.UTF-8"

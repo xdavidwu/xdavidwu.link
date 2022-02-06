@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "pack": "webpack -p"
+    "copy-vendor": "cp node_modules/lunr/lunr.min.js assets/js/lunr/lunr.min.js"
   },
   "dependencies": {
     "lunr": "^2.3.9"
