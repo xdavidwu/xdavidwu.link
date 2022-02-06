@@ -6,16 +6,11 @@
    Typography
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
-
 $doc-font-size: 16 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1em !default;
-
-/* system typefaces */
-$sans-serif: 'Noto Sans TC', sans-serif !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
