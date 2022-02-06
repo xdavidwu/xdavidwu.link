@@ -202,7 +202,7 @@
   }
 
   .no-print {
-    display: none;
+    display: none !important;
   }
 
   a.no-reformat:after {
