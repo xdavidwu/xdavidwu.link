@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "copy-vendor": "cp node_modules/lunr/lunr.min.js assets/js/lunr/lunr.min.js"
+    "copy-vendor": "cp node_modules/lunr/lunr.min.js assets/js/lunr/ && cp node_modules/fork-awesome/css/fork-awesome.min.css assets/css/ && cp -r node_modules/fork-awesome/fonts assets/"
   },
   "dependencies": {
+    "fork-awesome": "^1.2.0",
     "lunr": "^2.3.9"
   }
 }
