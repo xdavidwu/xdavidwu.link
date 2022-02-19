@@ -31,41 +31,39 @@ gemini:
     paths:
       - gemini
 
-npm-vendor:
-  stage: build
-  image: alpine:latest
-  before_script:
-    - apk add npm
-  script:
-    - npm ci
-    - npm run copy-vendor
-  artifacts:
-    paths:
-      - assets/js/lunr/lunr.min.js
-      - assets/css/fork-awesome.min.css
-      - assets/fonts
-
 pages:
-  stage: deploy
+  stage: build
   image: ruby:alpine
-  needs:
-    - npm-vendor
   variables:
     JEKYLL_ENV: production
     LC_ALL: "C.UTF-8"
   before_script:
+    - apk add npm
+    - npm ci
+    - npm run copy-vendor
     - bundle check --path .bundler || apk add git make gcc musl-dev g++
     - mkdir -p .bundler
     - bundle install -j $(nproc) --path .bundler
   script:
     - bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> _sass/minimal-mistakes/skins/_custom.scss
     - bundle exec rougify style base16.solarized.light >> _sass/minimal-mistakes/skins/_custom-light.scss
-    - bundle exec jekyll build -d public
+    - bundle exec jekyll build
   artifacts:
     paths:
-      - public
+      - _site
   cache:
     paths:
       - .bundler
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add curl
+  script:
+    - tar -C gemini -cvz . > gemini.tar.gz
+    - tar -C _site -cvz . > https.tar.gz
+    - curl --oauth2-bearer "$SRHT_PAT" -Fcontent=@gemini.tar.gz -Fprotocol=GEMINI https://pages.xdavidwu.link/publish/xdavidwu.link
+    - curl --oauth2-bearer "$SRHT_PAT" -Fcontent=@https.tar.gz -Fprotocol=HTTPS https://pages.xdavidwu.link/publish/xdavidwu.link
   only:
     - master
