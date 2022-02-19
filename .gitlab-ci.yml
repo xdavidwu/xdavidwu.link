@@ -31,7 +31,7 @@ gemini:
     paths:
       - gemini
 
-pages:
+https:
   stage: build
   image: ruby:alpine
   variables:
