@@ -392,7 +392,11 @@
   }
 
   // matrix.to fails with slash in localpart
-  .cactus-matrixdotto-button {
+  .cactus-login-client {
+    display: none !important;
+  }
+
+  .cactus-login-credentials-title {
     display: none !important;
   }
 
