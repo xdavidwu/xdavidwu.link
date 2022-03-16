@@ -112,7 +112,7 @@ author:
     - label: "PGP"
       icon: "lock"
       url: "/pgp-public-key.txt"
-    - label: "sourcehut"
+    - label: "SourceHut"
       icon: "circle-thin"
       url: "https://git.xdavidwu.link/~xdavidwu/"
     - label: "GitLab"
