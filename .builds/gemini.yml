@@ -13,6 +13,7 @@ tasks:
         OIFS="$IFS"
         IFS=$'\n'
         mv "$i" "${i}.orig"
+        set +x
         while read LINE; do
           F=$(echo "$LINE" | sed 's/^{% include_relative \(.*\) %}$/\1/')
           if [ -f "$F" ]; then
@@ -21,6 +22,7 @@ tasks:
             printf "%s\n" "$LINE" >> "$i"
           fi
         done < "${i}.orig"
+        set -x
         IFS=$OIFS
         echo "=> $(echo $i | sed s/\.md$/.gmi/) $(echo $i | cut -f 1-3 -d '-'): $(grep '^title:' $i | cut -f 2 -d \")" >> ../gemini/index.gmi
       done
