@@ -108,7 +108,7 @@
     padding: 0.5em 0em;
     font-size: $type-size-5;
 
-    .right {
+    &.right {
       text-align: end;
     }
   }
