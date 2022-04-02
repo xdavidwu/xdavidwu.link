@@ -3,7 +3,7 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
   - npm
   - ruby-bundler
-  - ruby-jekyll
+  - jekyll
   - ruby-rake
   - ruby-dev
   - make
