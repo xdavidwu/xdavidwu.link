@@ -11,6 +11,8 @@ packages:
   - musl-dev
   - g++
   - hut
+environment:
+  JEKYLL_ENV: production
 secrets:
   - 6d48e21f-999e-4b3f-b3db-71a77927cc62
 tasks:
