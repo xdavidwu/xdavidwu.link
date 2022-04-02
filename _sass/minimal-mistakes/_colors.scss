@@ -113,25 +113,6 @@ figcaption {
       }
     }
   }
-
-  &--pager {
-    color: $pager-text-color;
-    background: $primary-color;
-    border-color: $background-color;
-
-    &:visited {
-      color: $pager-text-color;
-    }
-
-    &:hover {
-      background: $primary-color-raised;
-    }
-
-    &.disabled {
-      color: $pager-text-color-disabled;
-      background: $primary-color-disabled;
-    }
-  }
 }
 
 .page__content + .pagination,
