@@ -131,24 +131,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "github"
-      # url:
     - label: "Source code"
       icon: "circle-thin"
       url: "https://git.xdavidwu.link/~xdavidwu/xdavidwu.link"
-    - label: "Bitbucket"
-      icon: "bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "instagram"
-      # url:
     - label: "Feed"
       icon: "rss-square"
       url: "/feed.xml"
