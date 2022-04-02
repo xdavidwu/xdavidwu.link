@@ -26,7 +26,7 @@ url: "https://xdavidwu.link" # the base hostname & protocol for your site e.g. "
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 since: "2018"
-license_url: "https://gitlab.xdavidwu.link/xdavidwu/xdavidwu.xdavidwu.link/-/blob/master/LICENSE"
+license_url: "https://git.xdavidwu.link/~xdavidwu/xdavidwu.link/tree/master/item/LICENSE"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
@@ -141,8 +141,8 @@ footer:
       icon: "github"
       # url:
     - label: "Source code"
-      icon: "gitlab"
-      url: "https://gitlab.xdavidwu.link/xdavidwu/xdavidwu.xdavidwu.link"
+      icon: "circle-thin"
+      url: "https://git.xdavidwu.link/~xdavidwu/xdavidwu.link"
     - label: "Bitbucket"
       icon: "bitbucket"
       # url:

@@ -1,0 +1,31 @@
+image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - py3-pip
+  - hut
+tasks:
+  - tools: |
+      pip3 install md2gemini
+      find /lib /usr/lib ~/ -name 'renderers.py' -exec sed -i -E 's/text\.rstrip\(\)\.endswith\("\[" \+ str\(self\.footnote_num\) \+ "\]"\)/False/' {} \;
+  - generate: |
+      cd xdavidwu.link/_posts
+      for i in $(ls -r *.md);do
+        OIFS="$IFS"
+        IFS=$'\n'
+        mv "$i" "${i}.orig"
+        while read LINE; do
+          F=$(echo "$LINE" | sed 's/^{% include_relative \(.*\) %}$/\1/')
+          if [ -f "$F" ]; then
+            cat "$F" >> "$i"
+          else
+            printf "%s\n" "$LINE" >> "$i"
+          fi
+        done < "${i}.orig"
+        IFS=$OIFS
+        echo "=> $(echo $i | sed s/\.md$/.gmi/) $(echo $i | cut -f 1-3 -d '-'): $(grep '^title:' $i | cut -f 2 -d \")" >> ../gemini/index.gmi
+      done
+      md2gemini -w -d ../gemini -a -f -i tab -l paragraph *.md
+  - pack: |
+      tar -C xdavidwu.link/gemini -cvz . > gemini.tar.gz
+  - publish: |
+      hut pages publish gemini.tar.gz -d xdavidwu.link -p GEMINI

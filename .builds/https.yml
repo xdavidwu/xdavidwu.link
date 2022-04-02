@@ -1,0 +1,27 @@
+image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - npm
+  - ruby-bundler
+  - ruby-jekyll
+  - hut
+secrets:
+  - 6d48e21f-999e-4b3f-b3db-71a77927cc62
+tasks:
+  - npm: |
+      cd xdavidwu.link
+      npm ci
+      npm run copy-vendor
+  - jekyll: |
+      cd xdavidwu.link
+      bundle install -j $(nproc)
+      bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> _sass/minimal-mistakes/skins/_custom.scss
+      bundle exec rougify style base16.solarized.light >> _sass/minimal-mistakes/skins/_custom-light.scss
+      set +x
+      export MATRIX_ACCESS_TOKEN=$(cat ~/.matrix_access_token)
+      set -x
+      bundle exec jekyll build
+  - pack: |
+      tar -C xdavidwu.link/_site -cvz . > https.tar.gz
+  - publish: |
+      hut pages publish https.tar.gz -d xdavidwu.link
