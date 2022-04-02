@@ -1,21 +1,13 @@
 {% if page.previous or page.next %}
   <nav class="pagination">
     {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">
-        <i class="fa fa-angle-left"></i>
-      </a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">
-        <i class="fa fa-angle-left"></i>
+      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager">
+        <i class="fa fa-angle-left"></i> {{ page.previous.title | markdownify | strip_html }}
       </a>
     {% endif %}
     {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">
-        <i class="fa fa-angle-right"></i>
-      </a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">
-        <i class="fa fa-angle-right"></i>
+      <a href="{{ page.next.url | relative_url }}" class="pagination--pager right">
+        {{ page.next.title | markdownify | strip_html }} <i class="fa fa-angle-right"></i>
       </a>
     {% endif %}
   </nav>
