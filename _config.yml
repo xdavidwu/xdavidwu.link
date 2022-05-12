@@ -103,7 +103,7 @@ author:
   name: "xdavidwu"
   avatar: /assets/img/avatar.jpg
   home: /about/
-  bio: "Always debugging."
+  bio: ''
   location:
   links:
     - label: "Email"
