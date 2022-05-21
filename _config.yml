@@ -107,7 +107,7 @@ author:
   location:
   links:
     - label: "Email"
-      icon: "envelope-square"
+      icon: "envelope-o"
       url: "mailto:xdavidwuph@gmail.com"
     - label: "PGP"
       icon: "lock"
@@ -135,7 +135,7 @@ footer:
       icon: "circle-thin"
       url: "https://git.xdavidwu.link/~xdavidwu/xdavidwu.link"
     - label: "Feed"
-      icon: "rss-square"
+      icon: "rss"
       url: "/feed.xml"
     - label: "Back to top"
       icon: "angle-double-up"
