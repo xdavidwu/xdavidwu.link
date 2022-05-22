@@ -206,8 +206,8 @@ body:hover .visually-hidden button {
 
 .navicon {
   position: relative;
-  width: $navicon-width;
-  height: $navicon-height;
+  width: 1.25rem;
+  height: 0.15rem;
   margin: auto;
   transition: 0.3s;
 
@@ -216,17 +216,17 @@ body:hover .visually-hidden button {
     content: "";
     position: absolute;
     left: 0;
-    width: $navicon-width;
-    height: $navicon-height;
+    width: 1.25rem;
+    height: 0.15rem;
     transition: 0.3s;
   }
 
   &:before {
-    top: (-2 * $navicon-height);
+    top: -0.4rem;
   }
 
   &:after {
-    bottom: (-2 * $navicon-height);
+    bottom: -0.4rem;
   }
 }
 
@@ -236,7 +236,7 @@ body:hover .visually-hidden button {
   &:after {
     transform-origin: 50% 50%;
     top: 0;
-    width: $navicon-width;
+    width: 1.5rem;
   }
 
   /* rotate the lines to form the x shape*/
