@@ -138,7 +138,7 @@ footer:
       icon: "rss"
       url: "/feed.xml"
     - label: "Back to top"
-      icon: "angle-double-up"
+      icon: "chevron-up"
       url: "#"
 
 
