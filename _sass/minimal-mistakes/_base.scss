@@ -7,6 +7,7 @@ html {
   position: relative;
   min-height: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 2.75rem;
 }
 
 body {
@@ -30,7 +31,6 @@ h6 {
   margin: 1.5em 0 0.5em;
   line-height: 1.2;
   font-weight: bold;
-  scroll-margin-top: 2.75rem;
 }
 
 h1 {
