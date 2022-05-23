@@ -36,7 +36,7 @@ input#darkmode, input#lightmode {
 }
 
 .greedy-nav__toggle.close:before, input#follow-button:checked + label:before {
-  opacity: 0.9;
+  opacity: 0.75;
   pointer-events: auto;
 }
 
