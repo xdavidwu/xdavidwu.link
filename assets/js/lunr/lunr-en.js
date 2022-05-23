@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resultdiv.innerHTML = "";
     let p = document.createElement("p");
     p.classList.add("results__found");
-    p.innerHTML = result.length + '{{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}';
+    p.innerHTML = result.length + ' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}';
     resultdiv.append(p);
     for (var item in result) {
       var ref = result[item].ref;
