@@ -47,14 +47,11 @@ function check() {
 }
 
 // Window listeners
-window.addEventListener('resize', () => {
-  check();
-});
+window.addEventListener('resize', check);
 
 $btn.addEventListener('click', () => {
   $hlinks.classList.toggle('hidden');
   $btn.classList.toggle('close');
 });
 
-check();
-
+window.addEventListener('load', check);
