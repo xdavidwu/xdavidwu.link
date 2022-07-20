@@ -17,4 +17,6 @@ layout: archive_notitle
   {% include archive-single.html type=entries_layout %}
 {% endfor %}
 
-{% include paginator.html %}
+{% if paginator %}
+  {% include paginator.html %}
+{% endif %}
