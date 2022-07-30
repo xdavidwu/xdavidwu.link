@@ -1,5 +1,5 @@
 ---
-title: "Quick View" in DocumentsUI
+title: '"Quick View" in DocumentsUI'
 categories:
   - Android
 tags:
