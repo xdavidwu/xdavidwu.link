@@ -22,7 +22,7 @@ tasks:
       npm run copy-vendor
   - jekyll: |
       cd xdavidwu.link
-      bundle install -j $(nproc)
+      sudo bundle install -j $(nproc)
       bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> _sass/minimal-mistakes/skins/_custom.scss
       bundle exec rougify style base16.solarized.light >> _sass/minimal-mistakes/skins/_custom-light.scss
       set +x
