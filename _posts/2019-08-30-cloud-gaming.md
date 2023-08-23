@@ -5,7 +5,7 @@ categories:
 tags:
   - linux
   - gpu
-  - xorg
+  - x11
   - gaming
 ---
 
