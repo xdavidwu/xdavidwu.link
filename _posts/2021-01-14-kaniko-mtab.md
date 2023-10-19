@@ -1,7 +1,7 @@
 ---
 title: "Creating an OS image with Kaniko"
 categories:
-  - Container
+  - Containers
 tags:
   - kaniko
   - linux
