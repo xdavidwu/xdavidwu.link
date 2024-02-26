@@ -29,7 +29,5 @@ tasks:
       export MATRIX_ACCESS_TOKEN=$(cat ~/.matrix_access_token)
       set -x
       bundle exec jekyll build
-  - pack: |
-      tar -C xdavidwu.link/_site -cvz . > https.tar.gz
   - publish: |
-      hut pages publish https.tar.gz -d xdavidwu.link
+      hut pages publish xdavidwu.link/_site -d xdavidwu.link
