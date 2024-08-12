@@ -3,11 +3,11 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
   - py3-pip
   - hut
-  - md2gemini
   - yq
 tasks:
   - tools: |
-      find /usr/lib -name 'renderers.py' -exec sed -i -E 's/text\.rstrip\(\)\.endswith\("\[" \+ str\(self\.footnote_num\) \+ "\]"\)/False/' {} \;
+      pip3 install md2gemini --break-system-packages
+      find ~/.local -name 'renderers.py' -exec sed -i -E 's/text\.rstrip\(\)\.endswith\("\[" \+ str\(self\.footnote_num\) \+ "\]"\)/False/' {} \;
   - generate: |
       cd xdavidwu.link/_posts
       for i in $(ls -r *.md);do
@@ -27,6 +27,6 @@ tasks:
         IFS=$OIFS
         echo "=> $(echo $i | sed s/\.md$/.gmi/) $(echo $i | cut -f 1-3 -d '-'): $(grep '^title:' $i | yq .title)" >> ../gemini/index.gmi
       done
-      md2gemini -w -d ../gemini -a -f -i tab -l paragraph *.md
+      ~/.local/bin/md2gemini -w -d ../gemini -a -f -i tab -l paragraph *.md
   - publish: |
       hut pages publish xdavidwu.link/gemini -d xdavidwu.link -p GEMINI
