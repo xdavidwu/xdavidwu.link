@@ -3,7 +3,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: alpine:3.23
+    container: alpine:3.21
     steps:
       - name: deps  # submodules needs git
         run: apk add npm ruby-bundler jekyll ruby-rake ruby-dev make gcc musl-dev g++ git
