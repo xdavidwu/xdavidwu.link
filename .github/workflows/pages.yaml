@@ -1,0 +1,24 @@
+name: pages
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: alpine:3.23
+    steps:
+      - name: deps  # submodules needs git
+        run: apk add npm ruby-bundler jekyll ruby-rake ruby-dev make gcc musl-dev g++ git
+      - uses: actions/checkout@v6
+        with:
+          submodules: true
+      - name: npm deps
+        run: npm ci
+      - name: ruby deps
+        run: bundle install -j $(nproc)
+      - name: npm copy
+        run: npm run copy-vendor
+      - name: rougify
+        run: |
+          bundle exec rougify style base16.solarized.dark | sed 's/002b36/202124/g' >> _sass/minimal-mistakes/skins/_custom.scss
+          bundle exec rougify style base16.solarized.light >> _sass/minimal-mistakes/skins/_custom-light.scss
+      - name: jekyll
+        run: bundle exec jekyll build
